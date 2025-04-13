@@ -1,0 +1,343 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EcoMarket - Productos Orgánicos</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.2.3/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="assets/css/styles.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/toastify-js/src/toastify.min.css">
+
+    <!-- Scripts -->
+    <script src="https://cdn.jsdelivr.net/npm/toastify-js/src/toastify.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.2.3/js/bootstrap.bundle.min.js"></script>
+    <script src="assets/js/Script.js" type="module"></script>
+</head>
+<body>
+
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-success fixed-top">
+        <div class="container">
+            <a class="navbar-brand" href="Main.html">
+                <img src="assets/img/icons/logo/Logo.png" alt="EcoMarket" width="120">
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" role="button" 
+                        data-bs-toggle="dropdown" aria-expanded="false">
+                            Categorías
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="Frutas y Verduras.html">Frutas y Verduras</a></li>
+                            <li><a class="dropdown-item" href="Granos y Legumbres.html">Granos y Legumbres</a></li>
+                            <li><a class="dropdown-item" href="Productos Elaborados.html">Productos Elaborados</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item"><a class="nav-link" href="Ofertas Especiales.html">Ofertas</a></li>
+                    <li class="nav-item"><a class="nav-link" href="Blog.html">Blog</a></li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" role="button" 
+                        data-bs-toggle="dropdown" aria-expanded="false">
+                            Nosotros
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="Sobre Nosotros.html">Conócenos</a></li>
+                            <li><a class="dropdown-item" href="Contacto.html">Contacto</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="Cart.html">
+                            <i class="fas fa-shopping-cart"></i>
+                            <span id="cart-count" class="badge bg-danger">0</span>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Banner principal -->
+     <div class="main-banner mt-5">
+        <img src="assets/img/Productos Elaborados/Head/Banner1.png"
+        class="d-block w-100" 
+         alt="Productos orgánicos frescos" 
+         style="object-fit: cover; height: 500px;">
+    </div>
+
+    <!-- Categoría: Productos Elaborados -->
+    <div class="container my-5">
+        <h2 class="text-center mb-4 category-title">Productos Elaborados</h2>
+        <p class="text-center text-muted">Nuestros productos elaborados están hechos con los mejores ingredientes orgánicos para garantizar calidad y sabor.</p>
+        <div class="row">
+            <!-- Producto 1 -->
+            <div class="col-md-3 mb-4">
+                <div class="card product-card h-100">
+                    <img src="assets/img/Productos Elaborados/Food/Mermelada Orgánica.jpg" class="card-img-top" alt="Mermelada Orgánica">
+                    <div class="card-body">
+                        <h5 class="card-title">Mermelada Orgánica</h5>
+                        <p class="product-unit">Precio por frasco</p>
+                        <p class="product-price">S/. 15</p>
+                        <div class="quantity-selector">
+                            <button class="btn btn-outline-secondary btn-sm" onclick="decrementQuantity(this)" aria-label="Reducir cantidad">-</button>
+                            <input type="number" class="form-control form-control-sm" value="1" min="1" readonly aria-label="Cantidad">
+                            <button class="btn btn-outline-secondary btn-sm" onclick="incrementQuantity(this)" aria-label="Aumentar cantidad">+</button>
+                        </div>
+                        <div class="product-actions mt-3">
+                            <button class="btn btn-primary" onclick="addToCart(this)" aria-label="Agregar al carrito" data-id="3001" data-name="Mermelada Orgánica" data-price="15.00">
+                                <i class="fas fa-cart-plus"></i> Agregar al carrito
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- Producto 2 -->
+            <div class="col-md-3 mb-4">
+                <div class="card product-card h-100">
+                    <img src="assets/img/Productos Elaborados/Food/Pan Integral.jpg" class="card-img-top" alt="Pan Integral">
+                    <div class="card-body">
+                        <h5 class="card-title">Pan Integral</h5>
+                        <p class="product-unit">Precio por pieza</p>
+                        <p class="product-price">S/. 8</p>
+                        <div class="quantity-selector">
+                            <button class="btn btn-outline-secondary btn-sm" onclick="decrementQuantity(this)" aria-label="Reducir cantidad">-</button>
+                            <input type="number" class="form-control form-control-sm" value="1" min="1" readonly aria-label="Cantidad">
+                            <button class="btn btn-outline-secondary btn-sm" onclick="incrementQuantity(this)" aria-label="Aumentar cantidad">+</button>
+                        </div>
+                        <div class="product-actions mt-3">
+                            <button class="btn btn-primary" onclick="addToCart(this)" aria-label="Agregar al carrito" data-id="3002" data-name="Pan Integral" data-price="8.00">
+                                <i class="fas fa-cart-plus"></i> Agregar al carrito
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- Producto 3 -->
+            <div class="col-md-3 mb-4">
+                <div class="card product-card h-100">
+                    <img src="assets/img/Productos Elaborados/Food/Yogurt.jpg" class="card-img-top" alt="Yogurt Orgánico">
+                    <div class="card-body">
+                        <h5 class="card-title">Yogurt Orgánico</h5>
+                        <p class="product-unit">Precio por botella</p>
+                        <p class="product-price">S/. 12</p>
+                        <div class="quantity-selector">
+                            <button class="btn btn-outline-secondary btn-sm" onclick="decrementQuantity(this)" aria-label="Reducir cantidad">-</button>
+                            <input type="number" class="form-control form-control-sm" value="1" min="1" readonly aria-label="Cantidad">
+                            <button class="btn btn-outline-secondary btn-sm" onclick="incrementQuantity(this)" aria-label="Aumentar cantidad">+</button>
+                        </div>
+                        <div class="product-actions mt-3">
+                            <button class="btn btn-primary" onclick="addToCart(this)" aria-label="Agregar al carrito" data-id="3003" data-name="Yogurt Orgánico" data-price="12.00">
+                                <i class="fas fa-cart-plus"></i> Agregar al carrito
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- Producto 4 -->
+            <div class="col-md-3 mb-4">
+                <div class="card product-card h-100">
+                    <img src="assets/img/Productos Elaborados/Food/Queso.jpg" class="card-img-top" alt="Queso Artesanal">
+                    <div class="card-body">
+                        <h5 class="card-title">Queso Artesanal</h5>
+                        <p class="product-unit">Precio por 500g</p>
+                        <p class="product-price">S/. 20</p>
+                        <div class="quantity-selector">
+                            <button class="btn btn-outline-secondary btn-sm" onclick="decrementQuantity(this)" aria-label="Reducir cantidad">-</button>
+                            <input type="number" class="form-control form-control-sm" value="1" min="1" readonly aria-label="Cantidad">
+                            <button class="btn btn-outline-secondary btn-sm" onclick="incrementQuantity(this)" aria-label="Aumentar cantidad">+</button>
+                        </div>
+                        <div class="product-actions mt-3">
+                            <button class="btn btn-primary" onclick="addToCart(this)" aria-label="Agregar al carrito" data-id="3004" data-name="Queso Artesanal" data-price="20.00">
+                                <i class="fas fa-cart-plus"></i> Agregar al carrito
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- Producto 5 -->
+            <div class="col-md-3 mb-4">
+                <div class="card product-card h-100">
+                    <img src="assets/img/Productos Elaborados/Food/Mantequilla.jpg" class="card-img-top" alt="Mantequilla Artesanal">
+                    <div class="card-body">
+                        <h5 class="card-title">Mantequilla Artesanal</h5>
+                        <p class="product-unit">Precio por 250g</p>
+                        <p class="product-price">S/. 10</p>
+                        <div class="quantity-selector">
+                            <button class="btn btn-outline-secondary btn-sm" onclick="decrementQuantity(this)" aria-label="Reducir cantidad">-</button>
+                            <input type="number" class="form-control form-control-sm" value="1" min="1" readonly aria-label="Cantidad">
+                            <button class="btn btn-outline-secondary btn-sm" onclick="incrementQuantity(this)" aria-label="Aumentar cantidad">+</button>
+                        </div>
+                        <div class="product-actions mt-3">
+                            <button class="btn btn-primary" onclick="addToCart(this)" aria-label="Agregar al carrito" data-id="3005" data-name="Mantequilla Artesanal" data-price="10.00">
+                                <i class="fas fa-cart-plus"></i> Agregar al carrito
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- Producto 6 -->
+            <div class="col-md-3 mb-4">
+                <div class="card product-card h-100">
+                    <img src="assets/img/Productos Elaborados/Food/Miel.jpg" class="card-img-top" alt="Miel Orgánica">
+                    <div class="card-body">
+                        <h5 class="card-title">Miel Orgánica</h5>
+                        <p class="product-unit">Precio por frasco</p>
+                        <p class="product-price">S/. 18</p>
+                        <div class="quantity-selector">
+                            <button class="btn btn-outline-secondary btn-sm" onclick="decrementQuantity(this)" aria-label="Reducir cantidad">-</button>
+                            <input type="number" class="form-control form-control-sm" value="1" min="1" readonly aria-label="Cantidad">
+                            <button class="btn btn-outline-secondary btn-sm" onclick="incrementQuantity(this)" aria-label="Aumentar cantidad">+</button>
+                        </div>
+                        <div class="product-actions mt-3">
+                            <button class="btn btn-primary" onclick="addToCart(this)" aria-label="Agregar al carrito" data-id="3006" data-name="Miel Orgánica" data-price="18.00">
+                                <i class="fas fa-cart-plus"></i> Agregar al carrito
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- Producto 7 -->
+            <div class="col-md-3 mb-4">
+                <div class="card product-card h-100">
+                    <img src="assets/img/Productos Elaborados/Food/Chocolate.jpg" class="card-img-top" alt="Chocolate Artesanal">
+                    <div class="card-body">
+                        <h5 class="card-title">Chocolate Artesanal</h5>
+                        <p class="product-unit">Precio por barra</p>
+                        <p class="product-price">S/. 12</p>
+                        <div class="quantity-selector">
+                            <button class="btn btn-outline-secondary btn-sm" onclick="decrementQuantity(this)" aria-label="Reducir cantidad">-</button>
+                            <input type="number" class="form-control form-control-sm" value="1" min="1" readonly aria-label="Cantidad">
+                            <button class="btn btn-outline-secondary btn-sm" onclick="incrementQuantity(this)" aria-label="Aumentar cantidad">+</button>
+                        </div>
+                        <div class="product-actions mt-3">
+                            <button class="btn btn-primary" onclick="addToCart(this)" aria-label="Agregar al carrito" data-id="3007" data-name="Chocolate Artesanal" data-price="12.00">
+                                <i class="fas fa-cart-plus"></i> Agregar al carrito
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- Producto 8 -->
+            <div class="col-md-3 mb-4">
+                <div class="card product-card h-100">
+                    <img src="assets/img/Productos Elaborados/Food/Galletas.jpg" class="card-img-top" alt="Galletas Integrales">
+                    <div class="card-body">
+                        <h5 class="card-title">Galletas Integrales</h5>
+                        <p class="product-unit">Precio por paquete</p>
+                        <p class="product-price">S/. 8</p>
+                        <div class="quantity-selector">
+                            <button class="btn btn-outline-secondary btn-sm" onclick="decrementQuantity(this)" aria-label="Reducir cantidad">-</button>
+                            <input type="number" class="form-control form-control-sm" value="1" min="1" readonly aria-label="Cantidad">
+                            <button class="btn btn-outline-secondary btn-sm" onclick="incrementQuantity(this)" aria-label="Aumentar cantidad">+</button>
+                        </div>
+                        <div class="product-actions mt-3">
+                            <button class="btn btn-primary" onclick="addToCart(this)" aria-label="Agregar al carrito" data-id="3008" data-name="Galletas Integrales" data-price="8.00">
+                                <i class="fas fa-cart-plus"></i> Agregar al carrito
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- Producto 9 -->
+            <div class="col-md-3 mb-4">
+                <div class="card product-card h-100">
+                    <img src="assets/img/Productos Elaborados/Food/Granola.jpg" class="card-img-top" alt="Granola Orgánica">
+                    <div class="card-body">
+                        <h5 class="card-title">Granola Orgánica</h5>
+                        <p class="product-unit">Precio por 500g</p>
+                        <p class="product-price">S/. 15</p>
+                        <div class="quantity-selector">
+                            <button class="btn btn-outline-secondary btn-sm" onclick="decrementQuantity(this)" aria-label="Reducir cantidad">-</button>
+                            <input type="number" class="form-control form-control-sm" value="1" min="1" readonly aria-label="Cantidad">
+                            <button class="btn btn-outline-secondary btn-sm" onclick="incrementQuantity(this)" aria-label="Aumentar cantidad">+</button>
+                        </div>
+                        <div class="product-actions mt-3">
+                            <button class="btn btn-primary" onclick="addToCart(this)" aria-label="Agregar al carrito" data-id="3009" data-name="Granola Orgánica" data-price="15.00">
+                                <i class="fas fa-cart-plus"></i> Agregar al carrito
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- Producto 10 -->
+            <div class="col-md-3 mb-4">
+                <div class="card product-card h-100">
+                    <img src="assets/img/Productos Elaborados/Food/Pasta.jpg" class="card-img-top" alt="Pasta Integral">
+                    <div class="card-body">
+                        <h5 class="card-title">Pasta Integral</h5>
+                        <p class="product-unit">Precio por paquete</p>
+                        <p class="product-price">S/. 7</p>
+                        <div class="quantity-selector">
+                            <button class="btn btn-outline-secondary btn-sm" onclick="decrementQuantity(this)" aria-label="Reducir cantidad">-</button>
+                            <input type="number" class="form-control form-control-sm" value="1" min="1" readonly aria-label="Cantidad">
+                            <button class="btn btn-outline-secondary btn-sm" onclick="incrementQuantity(this)" aria-label="Aumentar cantidad">+</button>
+                        </div>
+                        <div class="product-actions mt-3">
+                            <button class="btn btn-primary" onclick="addToCart(this)" aria-label="Agregar al carrito" data-id="3010" data-name="Pasta Integral" data-price="7.00">
+                                <i class="fas fa-cart-plus"></i> Agregar al carrito
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- Producto 11 -->
+            <div class="col-md-3 mb-4">
+                <div class="card product-card h-100">
+                    <img src="assets/img/Productos Elaborados/Food/SalsaTomate.jpg" class="card-img-top" alt="Salsa de Tomate">
+                    <div class="card-body">
+                        <h5 class="card-title">Salsa de Tomate</h5>
+                        <p class="product-unit">Precio por frasco</p>
+                        <p class="product-price">S/. 10</p>
+                        <div class="quantity-selector">
+                            <button class="btn btn-outline-secondary btn-sm" onclick="decrementQuantity(this)" aria-label="Reducir cantidad">-</button>
+                            <input type="number" class="form-control form-control-sm" value="1" min="1" readonly aria-label="Cantidad">
+                            <button class="btn btn-outline-secondary btn-sm" onclick="incrementQuantity(this)" aria-label="Aumentar cantidad">+</button>
+                        </div>
+                        <div class="product-actions mt-3">
+                            <button class="btn btn-primary" onclick="addToCart(this)" aria-label="Agregar al carrito" data-id="3011" data-name="Salsa de Tomate" data-price="10.00">
+                                <i class="fas fa-cart-plus"></i> Agregar al carrito
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- Producto 12 -->
+            <div class="col-md-3 mb-4">
+                <div class="card product-card h-100">
+                    <img src="assets/img/Productos Elaborados/Food/Helado.jpg" class="card-img-top" alt="Helado Artesanal">
+                    <div class="card-body">
+                        <h5 class="card-title">Helado Artesanal</h5>
+                        <p class="product-unit">Precio por litro</p>
+                        <p class="product-price">S/. 25</p>
+                        <div class="quantity-selector">
+                            <button class="btn btn-outline-secondary btn-sm" onclick="decrementQuantity(this)" aria-label="Reducir cantidad">-</button>
+                            <input type="number" class="form-control form-control-sm" value="1" min="1" readonly aria-label="Cantidad">
+                            <button class="btn btn-outline-secondary btn-sm" onclick="incrementQuantity(this)" aria-label="Aumentar cantidad">+</button>
+                        </div>
+                        <div class="product-actions mt-3">
+                            <button class="btn btn-primary" onclick="addToCart(this)" aria-label="Agregar al carrito" data-id="3012" data-name="Helado Artesanal" data-price="25.00">
+                                <i class="fas fa-cart-plus"></i> Agregar al carrito
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="bg-dark text-white py-4">
+        <div class="container text-center">
+            <p>&copy; 2023 EcoMarket. Todos los derechos reservados.</p>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.2.3/js/bootstrap.bundle.min.js"></script>
+    <script src="assets/js/Script.js" type="module"></script>
+</body>
+</html>

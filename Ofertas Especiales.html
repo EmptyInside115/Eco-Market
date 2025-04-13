@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EcoMarket - Productos Orgánicos</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.2.3/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="assets/css/styles.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/toastify-js/src/toastify.min.css">
+
+    <!-- Scripts -->
+    <script src="https://cdn.jsdelivr.net/npm/toastify-js/src/toastify.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.2.3/js/bootstrap.bundle.min.js"></script>
+    <script src="assets/js/Script.js" type="module"></script>
+</head>
+<body>
+
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-success fixed-top">
+        <div class="container">
+            <a class="navbar-brand" href="Main.html">
+                <img src="assets/img/icons/logo/Logo.png" alt="EcoMarket" width="120">
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" role="button" 
+                        data-bs-toggle="dropdown" aria-expanded="false">
+                            Categorías
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="Frutas y Verduras.html">Frutas y Verduras</a></li>
+                            <li><a class="dropdown-item" href="Granos y Legumbres.html">Granos y Legumbres</a></li>
+                            <li><a class="dropdown-item" href="Productos Elaborados.html">Productos Elaborados</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item"><a class="nav-link" href="Ofertas Especiales.html">Ofertas</a></li>
+                    <li class="nav-item"><a class="nav-link" href="Blog.html">Blog</a></li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" role="button" 
+                        data-bs-toggle="dropdown" aria-expanded="false">
+                            Nosotros
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="Sobre Nosotros.html">Conócenos</a></li>
+                            <li><a class="dropdown-item" href="Contacto.html">Contacto</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="Cart.html">
+                            <i class="fas fa-shopping-cart"></i>
+                            <span id="cart-count" class="badge bg-danger">0</span>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Banner principal -->
+     <div class="main-banner mt-5">
+        <img src="assets/img/Especiales y Promociones/Head/Especiales y promociones.png"
+        class="d-block w-100" 
+         alt="Ofertas Especiales" 
+         style="object-fit: cover; height: 500px;">
+    </div>
+
+    <!-- Content Section -->
+    <div class="container my-5">
+        <h2 class="text-center mb-4 category-title">Especiales y Promociones</h2>
+        <p class="text-center text-muted">Descubre nuestras ofertas especiales y productos en promoción. ¡No te pierdas estas increíbles oportunidades!</p>
+        
+        <div class="row">
+            <!-- Promoción 1 -->
+            <div class="col-md-3 mb-4">
+                <div class="card product-card h-100">
+                    <span class="product-badge">-20%</span>
+                    <img src="assets/img/Especiales y Promociones/Food/canasta-organica.jpg" class="card-img-top" alt="Canasta Orgánica" loading="lazy">
+                    <div class="card-body">
+                        <h5 class="card-title">Canasta Orgánica</h5>
+                        <p class="product-unit">Selección especial</p>
+                        <p class="product-price">
+                            <span class="text-decoration-line-through text-muted">S/. 100.00</span>
+                            <span class="ms-2">S/. 80.00</span>
+                        </p>
+                        <div class="quantity-selector">
+                            <button class="btn btn-outline-secondary btn-sm decrement" aria-label="Reducir cantidad">-</button>
+                            <input type="number" class="form-control form-control-sm quantity" value="1" min="1" readonly>
+                            <button class="btn btn-outline-secondary btn-sm increment" aria-label="Aumentar cantidad">+</button>
+                        </div>
+                        <div class="product-actions mt-3">
+                            <button class="btn btn-primary add-to-cart" 
+                                    data-id="4001" 
+                                    data-name="Canasta Orgánica" 
+                                    data-price="80.00"
+                                    aria-label="Agregar al carrito">
+                                <i class="fas fa-cart-plus"></i> Agregar al carrito
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Promoción 2 -->
+            <div class="col-md-3 mb-4">
+                <div class="card product-card h-100">
+                    <span class="product-badge">-15%</span>
+                    <img src="assets/img/Especiales y Promociones/Food/pack-frutas.jpg" class="card-img-top" alt="Pack de Frutas" loading="lazy">
+                    <div class="card-body">
+                        <h5 class="card-title">Pack de Frutas</h5>
+                        <p class="product-unit">Surtido semanal</p>
+                        <p class="product-price">
+                            <span class="text-decoration-line-through text-muted">S/. 60.00</span>
+                            <span class="ms-2">S/. 51.00</span>
+                        </p>
+                        <div class="quantity-selector">
+                            <button class="btn btn-outline-secondary btn-sm decrement" aria-label="Reducir cantidad">-</button>
+                            <input type="number" class="form-control form-control-sm quantity" value="1" min="1" readonly>
+                            <button class="btn btn-outline-secondary btn-sm increment" aria-label="Aumentar cantidad">+</button>
+                        </div>
+                        <div class="product-actions mt-3">
+                            <button class="btn btn-primary add-to-cart" 
+                                    data-id="4002" 
+                                    data-name="Pack de Frutas" 
+                                    data-price="51.00"
+                                    aria-label="Agregar al carrito">
+                                <i class="fas fa-cart-plus"></i> Agregar al carrito
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Promoción 3 -->
+            <div class="col-md-3 mb-4">
+                <div class="card product-card h-100">
+                    <span class="product-badge">-10%</span>
+                    <img src="assets/img/Especiales y Promociones/Food/pack-mix-organico.jpg" class="card-img-top" alt="Pack Mix Orgánico" loading="lazy">
+                    <div class="card-body">
+                        <h5 class="card-title">Pack Mix Orgánico</h5>
+                        <p class="product-unit">Variedad de productos</p>
+                        <p class="product-price">
+                            <span class="text-decoration-line-through text-muted">S/. 70.00</span>
+                            <span class="ms-2">S/. 63.00</span>
+                        </p>
+                        <div class="quantity-selector">
+                            <button class="btn btn-outline-secondary btn-sm decrement" aria-label="Reducir cantidad">-</button>
+                            <input type="number" class="form-control form-control-sm quantity" value="1" min="1" readonly>
+                            <button class="btn btn-outline-secondary btn-sm increment" aria-label="Aumentar cantidad">+</button>
+                        </div>
+                        <div class="product-actions mt-3">
+                            <button class="btn btn-primary add-to-cart" 
+                                    data-id="4003" 
+                                    data-name="Pack Mix Orgánico" 
+                                    data-price="63.00"
+                                    aria-label="Agregar al carrito">
+                                <i class="fas fa-cart-plus"></i> Agregar al carrito
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Promoción 4 -->
+            <div class="col-md-3 mb-4">
+                <div class="card product-card h-100">
+                    <span class="product-badge">-25%</span>
+                    <img src="assets/img/Especiales y Promociones/Food/canasta-familiar.jpg" class="card-img-top" alt="Canasta Familiar" loading="lazy">
+                    <div class="card-body">
+                        <h5 class="card-title">Canasta Familiar</h5>
+                        <p class="product-unit">Para toda la familia</p>
+                        <p class="product-price">
+                            <span class="text-decoration-line-through text-muted">S/. 120.00</span>
+                            <span class="ms-2">S/. 90.00</span>
+                        </p>
+                        <div class="quantity-selector">
+                            <button class="btn btn-outline-secondary btn-sm decrement" aria-label="Reducir cantidad">-</button>
+                            <input type="number" class="form-control form-control-sm quantity" value="1" min="1" readonly>
+                            <button class="btn btn-outline-secondary btn-sm increment" aria-label="Aumentar cantidad">+</button>
+                        </div>
+                        <div class="product-actions mt-3">
+                            <button class="btn btn-primary add-to-cart" 
+                                    data-id="4004" 
+                                    data-name="Canasta Familiar" 
+                                    data-price="90.00"
+                                    aria-label="Agregar al carrito">
+                                <i class="fas fa-cart-plus"></i> Agregar al carrito
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Continue with other promotions using sequential IDs (4005, 4006, etc) -->
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="bg-dark text-white py-4">
+        <div class="container text-center">
+            <p>&copy; 2023 EcoMarket. Todos los derechos reservados.</p>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.2.3/js/bootstrap.bundle.min.js"></script>
+    <script src="assets/js/Script.js"></script>
+</body>
+</html>

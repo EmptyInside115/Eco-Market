@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EcoMarket - Productos Orgánicos</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.2.3/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="assets/css/styles.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/toastify-js/src/toastify.min.css">
+
+    <!-- Scripts -->
+    <script src="https://cdn.jsdelivr.net/npm/toastify-js/src/toastify.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.2.3/js/bootstrap.bundle.min.js"></script>
+    <script src="assets/js/Script.js" type="module"></script>
+</head>
+<body>
+
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-success fixed-top">
+        <div class="container">
+            <a class="navbar-brand" href="Main.html">
+                <img src="assets/img/icons/logo/Logo.png" alt="EcoMarket" width="120">
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" role="button" 
+                        data-bs-toggle="dropdown" aria-expanded="false">
+                            Categorías
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="Frutas y Verduras.html">Frutas y Verduras</a></li>
+                            <li><a class="dropdown-item" href="Granos y Legumbres.html">Granos y Legumbres</a></li>
+                            <li><a class="dropdown-item" href="Productos Elaborados.html">Productos Elaborados</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item"><a class="nav-link" href="Ofertas Especiales.html">Ofertas</a></li>
+                    <li class="nav-item"><a class="nav-link" href="Blog.html">Blog</a></li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" role="button" 
+                        data-bs-toggle="dropdown" aria-expanded="false">
+                            Nosotros
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="Sobre Nosotros.html">Conócenos</a></li>
+                            <li><a class="dropdown-item" href="Contacto.html">Contacto</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="Cart.html">
+                            <i class="fas fa-shopping-cart"></i>
+                            <span id="cart-count" class="badge bg-danger">0</span>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Banner principal -->
+        <img src="assets/img/Main/Carrusel/Banner3.png" class="d-block w-100"
+        
+    <!-- Categorías destacadas -->
+    <section id="categorias" class="container my-5">
+        <h2 class="text-center mb-4">Nuestras Categorías</h2>
+        <div class="row g-4">
+            <div class="col-md-4">
+                <div class="card h-100 shadow">
+                    <div class="text-center pt-4">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="80" height="80" fill="#198754" viewBox="0 0 16 16"></svg>
+                    </div>
+                    <div class="card-body text-center">
+                        <h5 class="card-title">Frutas y Verduras</h5>
+                        <a href="Frutas y Verduras.html" class="btn btn-outline-success">Ver productos</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card h-100 shadow">
+                    <div class="text-center pt-4">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="80" height="80" fill="#198754" viewBox="0 0 16 16"></svg>
+                    </div>
+                    <div class="card-body text-center">
+                        <h5 class="card-title">Granos y Legumbres</h5>
+                        <a href="Granos y Legumbres.html" class="btn btn-outline-success">Ver productos</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card h-100 shadow">
+                    <div class="text-center pt-4">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="80" height="80" fill="#198754" viewBox="0 0 16 16"></svg>
+                    </div>
+                    <div class="card-body text-center">
+                        <h5 class="card-title">Productos Elaborados</h5>
+                        <a href="Productos Elaborados.html" class="btn btn-outline-success">Ver productos</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Valores de la marca -->
+    <section class="values-section py-5 bg-light">
+        <div class="container">
+            <h2 class="text-center mb-5">Nuestros Valores</h2>
+            <div class="row g-4">
+                <div class="col-md-4">
+                    <div class="card h-100 text-center p-4 shadow">
+                        <div class="card-body">
+                            <i class="fas fa-leaf fa-3x text-success mb-3"></i>
+                            <h3 class="h4">Sostenibilidad</h3>
+                            <p class="text-muted">Promovemos prácticas agrícolas que respetan el medio ambiente y conservan los recursos naturales.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card h-100 text-center p-4 shadow">
+                        <div class="card-body">
+                            <i class="fas fa-handshake fa-3x text-success mb-3"></i>
+                            <h3 class="h4">Comercio Justo</h3>
+                            <p class="text-muted">Trabajamos directamente con agricultores locales garantizando precios justos y condiciones laborales dignas.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card h-100 text-center p-4 shadow">
+                        <div class="card-body">
+                            <i class="fas fa-certificate fa-3x text-success mb-3"></i>
+                            <h3 class="h4">Calidad Garantizada</h3>
+                            <p class="text-muted">Todos nuestros productos cumplen con los más altos estándares de calidad orgánica certificada.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonios de clientes -->
+    <section class="testimonials-section py-5">
+        <div class="container">
+            <h2 class="text-center mb-5">Lo que dicen nuestros clientes</h2>
+            <div class="row g-4">
+                <div class="col-md-4">
+                    <div class="testimonial-card p-4 h-100">
+                        <div class="d-flex align-items-center mb-3">
+                            <img src="assets/img/testimonials/user1.jpg" alt="Cliente 1" class="testimonial-img rounded-circle me-3">
+                            <div>
+                                <h5 class="mb-0">María González</h5>
+                                <small class="text-muted">Cliente frecuente</small>
+                            </div>
+                        </div>
+                        <div class="star-rating mb-3">
+                            <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+                        </div>
+                        <p class="mb-0">"La calidad de los productos superó mis expectativas. Ahora solo compro aquí mis alimentos orgánicos."</p>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="testimonial-card p-4 h-100">
+                        <div class="d-flex align-items-center mb-3">
+                            <img src="assets/img/testimonials/user2.jpg" alt="Cliente 2" class="testimonial-img rounded-circle me-3">
+                            <div>
+                                <h5 class="mb-0">Carlos Mendoza</h5>
+                                <small class="text-muted">Nuevo cliente</small>
+                            </div>
+                        </div>
+                        <div class="star-rating mb-3">
+                            <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+                        </div>
+                        <p class="mb-0">"Excelente servicio y entrega puntual. Los productos siempre llegan frescos y en perfecto estado."</p>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="testimonial-card p-4 h-100">
+                        <div class="d-flex align-items-center mb-3">
+                            <img src="assets/img/testimonials/user3.jpg" alt="Cliente 3" class="testimonial-img rounded-circle me-3">
+                            <div>
+                                <h5 class="mb-0">Ana Torres</h5>
+                                <small class="text-muted">Cliente premium</small>
+                            </div>
+                        </div>
+                        <div class="star-rating mb-3">
+                            <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+                        </div>
+                        <p class="mb-0">"Me encanta apoyar a productores locales y saber que estoy consumiendo alimentos realmente saludables."</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Ofertas especiales -->
+    <section class="bg-light py-5">
+        <div class="container">
+            <h2 class="text-center mb-4">Ofertas Destacadas</h2>
+            <div class="row g-4">
+                <div class="col-md-3">
+                    <div class="card h-100 shadow">
+                        <span class="badge bg-danger position-absolute m-2">-25%</span>
+                        <img src="assets/img/Main/food/quinoa.jpg" alt="Quinoa" class="img-fluid">
+                        <div class="card-body">
+                            <h5 class="card-title">Canasta Orgánica</h5>
+                            <p class="text-muted text-decoration-line-through">S/ 100.00</p>
+                            <p class="h4 text-success">S/ 75.00</p>
+                            <button class="btn btn-success w-100" onclick="addToCart(this)" data-id="4001">
+                                <i class="fas fa-cart-plus"></i> Agregar
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                <!-- Repetir para otras 3 ofertas -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Blog destacado -->
+    <section class="container my-5">
+        <h2 class="text-center mb-4">Últimas del Blog</h2>
+        <div class="row g-4">
+            <div class="col-md-4">
+                <div class="card h-100">
+                    <img src="assets/img/Main/food/FrutosSecos.jpg" alt="Frutos Secos" class="img-fluid">
+                    <div class="card-body">
+                        <h5 class="card-title">Beneficios de lo Orgánico</h5>
+                        <p class="card-text">Descubre cómo mejorar tu salud y el medio ambiente.</p>
+                        <a href="Blog.html" class="btn btn-link">Leer más →</a>
+                    </div>
+                </div>
+            </div>
+            <!-- Repetir para otros 2 artículos -->
+        </div>
+    </section>
+
+    <!-- Newsletter -->
+    <section class="bg-success text-white py-5">
+        <div class="container text-center">
+            <h2 class="mb-4">Suscríbete a nuestro newsletter</h2>
+            <form class="row g-3 justify-content-center">
+                <div class="col-md-6">
+                    <input type="email" class="form-control" placeholder="Ingresa tu correo electrónico">
+                </div>
+                <div class="col-md-2">
+                    <button type="submit" class="btn btn-light w-100">Suscribir</button>
+                </div>
+            </form>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-dark text-white py-4">
+        <div class="container">
+            <div class="row g-4">
+                <div class="col-md-4">
+                    <img src="assets/img/Main/food/MielPura.jpg" alt="Miel Orgánica" class="img-fluid">
+                    <p class="mt-3">Productos frescos directamente del campo a tu mesa.</p>
+                </div>
+                <div class="col-md-4">
+                    <h5>Enlaces rápidos</h5>
+                    <ul class="list-unstyled">
+                        <li><a href="Sobre Nosotros.html" class="text-white">Sobre nosotros</a></li>
+                        <li><a href="Blog.html" class="text-white">Blog</a></li>
+                        <li><a href="Contacto.html" class="text-white">Contacto</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-4">
+                    <h5>Redes sociales</h5>
+                    <div class="social-icons">
+                        <a href="#" class="text-white me-3"><i class="fab fa-facebook fa-2x"></i></a>
+                        <a href="#" class="text-white me-3"><i class="fab fa-instagram fa-2x"></i></a>
+                        <a href="#" class="text-white"><i class="fab fa-whatsapp fa-2x"></i></a>
+                    </div>
+                </div>
+            </div>
+            <hr class="my-4">
+            <p class="text-center mb-0">&copy; 2023 EcoMarket. Todos los derechos reservados.</p>
+        </div>
+    </footer>
+</body>
+</html>

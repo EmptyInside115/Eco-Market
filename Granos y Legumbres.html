@@ -1,0 +1,629 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EcoMarket - Productos Orgánicos</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.2.3/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="assets/css/styles.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/toastify-js/src/toastify.min.css">
+
+    <!-- Scripts -->
+    <script src="https://cdn.jsdelivr.net/npm/toastify-js/src/toastify.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.2.3/js/bootstrap.bundle.min.js"></script>
+    <script src="assets/js/Script.js" type="module"></script>
+</head>
+<body>
+
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-success fixed-top">
+        <div class="container">
+            <a class="navbar-brand" href="Main.html">
+                <img src="assets/img/icons/logo/Logo.png" alt="EcoMarket" width="120">
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" role="button" 
+                        data-bs-toggle="dropdown" aria-expanded="false">
+                            Categorías
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="Frutas y Verduras.html">Frutas y Verduras</a></li>
+                            <li><a class="dropdown-item" href="Granos y Legumbres.html">Granos y Legumbres</a></li>
+                            <li><a class="dropdown-item" href="Productos Elaborados.html">Productos Elaborados</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item"><a class="nav-link" href="Ofertas Especiales.html">Ofertas</a></li>
+                    <li class="nav-item"><a class="nav-link" href="Blog.html">Blog</a></li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" role="button" 
+                        data-bs-toggle="dropdown" aria-expanded="false">
+                            Nosotros
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="Sobre Nosotros.html">Conócenos</a></li>
+                            <li><a class="dropdown-item" href="Contacto.html">Contacto</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="Cart.html">
+                            <i class="fas fa-shopping-cart"></i>
+                            <span id="cart-count" class="badge bg-danger">0</span>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Banner principal -->
+     <div class="main-banner mt-5">
+        <img src="assets/img/Granos y Legumbres/Head/Banner1.png"
+        class="d-block w-100" 
+         alt="Granos y Legumbres" 
+         style="object-fit: cover; height: 500px;">
+    </div>
+        
+    <!-- Categoría: Granos -->
+    <div class="container my-5">
+        <h2 class="text-center mb-4 category-title">Granos Orgánicos</h2>
+        <p class="text-center text-muted">Nuestros granos son cultivados de manera sostenible, sin pesticidas ni químicos dañinos.</p>
+        <div class="row">
+            <!-- Product Cards -->
+            <div class="col-md-3 mb-4">
+                <div class="card product-card h-100">
+                    <img src="assets/img/Granos y Legumbres/Food/Granos Orgánicos/Quinoa Orgánica.jpg" class="card-img-top" alt="Quinoa">
+                    <div class="card-body">
+                        <h5 class="card-title">Quinoa Orgánica</h5>
+                        <p class="product-unit">Precio por kg</p>
+                        <p class="product-price">S/. 12</p>
+                        <div class="quantity-selector">
+                            <button class="btn btn-outline-secondary btn-sm" onclick="decrementQuantity(this)">-</button>
+                            <input type="number" class="form-control form-control-sm" value="1" min="1" readonly>
+                            <button class="btn btn-outline-secondary btn-sm" onclick="incrementQuantity(this)">+</button>
+                        </div>
+                        <div class="product-actions mt-3">
+                            <button class="btn btn-primary" onclick="addToCart(this)" 
+                                    data-id="2001" 
+                                    data-name="Quinoa Orgánica" 
+                                    data-price="12"
+                                    aria-label="Agregar al carrito">
+                                <i class="fas fa-cart-plus"></i> Agregar
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-3 mb-4">
+                <div class="card product-card h-100">
+                    <img src="assets/img/Granos y Legumbres/Food/Granos Orgánicos/Arroz Integral.jpg" class="card-img-top" alt="Arroz Integral">
+                    <div class="card-body">
+                        <h5 class="card-title">Arroz Integral</h5>
+                        <p class="product-unit">Precio por kg</p>
+                        <p class="product-price">S/. 6.5</p>
+                        <div class="quantity-selector">
+                            <button class="btn btn-outline-secondary btn-sm" onclick="decrementQuantity(this)">-</button>
+                            <input type="number" class="form-control form-control-sm" value="1" min="1" readonly>
+                            <button class="btn btn-outline-secondary btn-sm" onclick="incrementQuantity(this)">+</button>
+                        </div>
+                        <div class="product-actions mt-3">
+                            <button class="btn btn-primary" onclick="addToCart(this)" 
+                                    data-id="2002" 
+                                    data-name="Arroz Integral" 
+                                    data-price="6.5"
+                                    aria-label="Agregar al carrito">
+                                <i class="fas fa-cart-plus"></i> Agregar
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-3 mb-4">
+                <div class="card product-card h-100">
+                    <img src="assets/img/Granos y Legumbres/Food/Granos Orgánicos/Avena en Hojuelas.jpg" class="card-img-top" alt="Avena">
+                    <div class="card-body">
+                        <h5 class="card-title">Avena en Hojuelas</h5>
+                        <p class="product-unit">Precio por 500g</p>
+                        <p class="product-price">S/. 5</p>
+                        <div class="quantity-selector">
+                            <button class="btn btn-outline-secondary btn-sm" onclick="decrementQuantity(this)">-</button>
+                            <input type="number" class="form-control form-control-sm" value="1" min="1" readonly>
+                            <button class="btn btn-outline-secondary btn-sm" onclick="incrementQuantity(this)">+</button>
+                        </div>
+                        <div class="product-actions mt-3">
+                            <button class="btn btn-primary" onclick="addToCart(this)" 
+                                    data-id="2003" 
+                                    data-name="Avena en Hojuelas" 
+                                    data-price="5"
+                                    aria-label="Agregar al carrito">
+                                <i class="fas fa-cart-plus"></i> Agregar
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-3 mb-4">
+                <div class="card product-card h-100">
+                    <img src="assets/img/Granos y Legumbres/Food/Granos Orgánicos/Trigo Sarraceno.jpg" class="card-img-top" alt="Trigo Sarraceno">
+                    <div class="card-body">
+                        <h5 class="card-title">Trigo Sarraceno</h5>
+                        <p class="product-unit">Precio por 500g</p>
+                        <p class="product-price">S/. 8</p>
+                        <div class="quantity-selector">
+                            <button class="btn btn-outline-secondary btn-sm" onclick="decrementQuantity(this)">-</button>
+                            <input type="number" class="form-control form-control-sm" value="1" min="1" readonly>
+                            <button class="btn btn-outline-secondary btn-sm" onclick="incrementQuantity(this)">+</button>
+                        </div>
+                        <div class="product-actions mt-3">
+                            <button class="btn btn-primary" onclick="addToCart(this)" 
+                                    data-id="2004" 
+                                    data-name="Trigo Sarraceno" 
+                                    data-price="8"
+                                    aria-label="Agregar al carrito">
+                                <i class="fas fa-cart-plus"></i> Agregar
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-3 mb-4">
+                <div class="card product-card h-100">
+                    <img src="assets/img/Granos y Legumbres/Food/Granos Orgánicos/Maiz Morado.jpg" class="card-img-top" alt="Maíz Morado">
+                    <div class="card-body">
+                        <h5 class="card-title">Maíz Morado</h5>
+                        <p class="product-unit">Precio por kg</p>
+                        <p class="product-price">S/. 7</p>
+                        <div class="quantity-selector">
+                            <button class="btn btn-outline-secondary btn-sm" onclick="decrementQuantity(this)">-</button>
+                            <input type="number" class="form-control form-control-sm" value="1" min="1" readonly>
+                            <button class="btn btn-outline-secondary btn-sm" onclick="incrementQuantity(this)">+</button>
+                        </div>
+                        <div class="product-actions mt-3">
+                            <button class="btn btn-primary" onclick="addToCart(this)" 
+                                    data-id="2005" 
+                                    data-name="Maíz Morado" 
+                                    data-price="7"
+                                    aria-label="Agregar al carrito">
+                                <i class="fas fa-cart-plus"></i> Agregar
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-3 mb-4">
+                <div class="card product-card h-100">
+                    <img src="assets/img/Granos y Legumbres/Food/Granos Orgánicos/Cebada.jpg" class="card-img-top" alt="Cebada">
+                    <div class="card-body">
+                        <h5 class="card-title">Cebada Perlada</h5>
+                        <p class="product-unit">Precio por kg</p>
+                        <p class="product-price">S/. 5.5</p>
+                        <div class="quantity-selector">
+                            <button class="btn btn-outline-secondary btn-sm" onclick="decrementQuantity(this)">-</button>
+                            <input type="number" class="form-control form-control-sm" value="1" min="1" readonly>
+                            <button class="btn btn-outline-secondary btn-sm" onclick="incrementQuantity(this)">+</button>
+                        </div>
+                        <div class="product-actions mt-3">
+                            <button class="btn btn-primary" onclick="addToCart(this)" 
+                                    data-id="2006" 
+                                    data-name="Cebada Perlada" 
+                                    data-price="5.5"
+                                    aria-label="Agregar al carrito">
+                                <i class="fas fa-cart-plus"></i> Agregar
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-3 mb-4">
+                <div class="card product-card h-100">
+                    <img src="assets/img/Granos y Legumbres/Food/Granos Orgánicos/Arroz Integral.jpg" class="card-img-top" alt="Amaranto">
+                    <div class="card-body">
+                        <h5 class="card-title">Amaranto Orgánico</h5>
+                        <p class="product-unit">Precio por 500g</p>
+                        <p class="product-price">S/. 10</p>
+                        <div class="quantity-selector">
+                            <button class="btn btn-outline-secondary btn-sm" onclick="decrementQuantity(this)">-</button>
+                            <input type="number" class="form-control form-control-sm" value="1" min="1" readonly>
+                            <button class="btn btn-outline-secondary btn-sm" onclick="incrementQuantity(this)">+</button>
+                        </div>
+                        <div class="product-actions mt-3">
+                            <button class="btn btn-primary" onclick="addToCart(this)" 
+                                    data-id="2007" 
+                                    data-name="Amaranto Orgánico" 
+                                    data-price="10"
+                                    aria-label="Agregar al carrito">
+                                <i class="fas fa-cart-plus"></i> Agregar
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-3 mb-4">
+                <div class="card product-card h-100">
+                    <img src="assets/img/Granos y Legumbres/arroz-basmati.jpg" class="card-img-top" alt="Arroz Basmati">
+                    <div class="card-body">
+                        <h5 class="card-title">Arroz Basmati</h5>
+                        <p class="product-unit">Precio por kg</p>
+                        <p class="product-price">S/. 9</p>
+                        <div class="quantity-selector">
+                            <button class="btn btn-outline-secondary btn-sm" onclick="decrementQuantity(this)">-</button>
+                            <input type="number" class="form-control form-control-sm" value="1" min="1" readonly>
+                            <button class="btn btn-outline-secondary btn-sm" onclick="incrementQuantity(this)">+</button>
+                        </div>
+                        <div class="product-actions mt-3">
+                            <button class="btn btn-primary" onclick="addToCart(this)" 
+                                    data-id="2008" 
+                                    data-name="Arroz Basmati" 
+                                    data-price="9"
+                                    aria-label="Agregar al carrito">
+                                <i class="fas fa-cart-plus"></i> Agregar
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <!-- Categoría: Legumbres -->
+    <div class="container my-5">
+        <h2 class="text-center mb-4 category-title">Legumbres Orgánicas</h2>
+        <p class="text-center text-muted">Fuente excelente de proteína vegetal, fibra y minerales esenciales.</p>
+        <div class="row">
+            <!-- Product Cards -->
+            <div class="col-md-3 mb-4">
+                <div class="card product-card h-100">
+                    <img src="assets/img/Granos y Legumbres/Food/Legumbres Orgánicas/Lentejas.jpg" class="card-img-top" alt="Lentejas">
+                    <div class="card-body">
+                        <h5 class="card-title">Lentejas</h5>
+                        <p class="product-unit">Precio por kg</p>
+                        <p class="product-price">S/. 8</p>
+                        <div class="quantity-selector">
+                            <button class="btn btn-outline-secondary btn-sm" onclick="decrementQuantity(this)">-</button>
+                            <input type="number" class="form-control form-control-sm" value="1" min="1" readonly>
+                            <button class="btn btn-outline-secondary btn-sm" onclick="incrementQuantity(this)">+</button>
+                        </div>
+                        <div class="product-actions mt-3">
+                            <button class="btn btn-primary" onclick="addToCart(this)" 
+                                    data-id="2009" 
+                                    data-name="Lentejas" 
+                                    data-price="8"
+                                    aria-label="Agregar al carrito">
+                                <i class="fas fa-cart-plus"></i> Agregar
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-3 mb-4">
+                <div class="card product-card h-100">
+                    <img src="assets/img/Granos y Legumbres/Food/Legumbres Orgánicas/Frijoles Negros.jpg" class="card-img-top" alt="Frijoles Negros">
+                    <div class="card-body">
+                        <h5 class="card-title">Frijoles Negros</h5>
+                        <p class="product-unit">Precio por kg</p>
+                        <p class="product-price">S/. 6.5</p>
+                        <div class="quantity-selector">
+                            <button class="btn btn-outline-secondary btn-sm" onclick="decrementQuantity(this)">-</button>
+                            <input type="number" class="form-control form-control-sm" value="1" min="1" readonly>
+                            <button class="btn btn-outline-secondary btn-sm" onclick="incrementQuantity(this)">+</button>
+                        </div>
+                        <div class="product-actions mt-3">
+                            <button class="btn btn-primary" onclick="addToCart(this)" 
+                                    data-id="2010" 
+                                    data-name="Frijoles Negros" 
+                                    data-price="6.5"
+                                    aria-label="Agregar al carrito">
+                                <i class="fas fa-cart-plus"></i> Agregar
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-3 mb-4">
+                <div class="card product-card h-100">
+                    <img src="assets/img/Granos y Legumbres/pallares.jpg" class="card-img-top" alt="Pallares">
+                    <div class="card-body">
+                        <h5 class="card-title">Pallares</h5>
+                        <p class="product-unit">Precio por kg</p>
+                        <p class="product-price">S/. 9</p>
+                        <div class="quantity-selector">
+                            <button class="btn btn-outline-secondary btn-sm" onclick="decrementQuantity(this)">-</button>
+                            <input type="number" class="form-control form-control-sm" value="1" min="1" readonly>
+                            <button class="btn btn-outline-secondary btn-sm" onclick="incrementQuantity(this)">+</button>
+                        </div>
+                        <div class="product-actions mt-3">
+                            <button class="btn btn-primary" onclick="addToCart(this)" 
+                                    data-id="2011" 
+                                    data-name="Pallares" 
+                                    data-price="9"
+                                    aria-label="Agregar al carrito">
+                                <i class="fas fa-cart-plus"></i> Agregar
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-3 mb-4">
+                <div class="card product-card h-100">
+                    <img src="assets/img/Granos y Legumbres/Food/Legumbres Orgánicas/Soya.jpg" class="card-img-top" alt="Soya">
+                    <div class="card-body">
+                        <h5 class="card-title">Soya Orgánica</h5>
+                        <p class="product-unit">Precio por kg</p>
+                        <p class="product-price">S/. 8.5</p>
+                        <div class="quantity-selector">
+                            <button class="btn btn-outline-secondary btn-sm" onclick="decrementQuantity(this)">-</button>
+                            <input type="number" class="form-control form-control-sm" value="1" min="1" readonly>
+                            <button class="btn btn-outline-secondary btn-sm" onclick="incrementQuantity(this)">+</button>
+                        </div>
+                        <div class="product-actions mt-3">
+                            <button class="btn btn-primary" onclick="addToCart(this)" 
+                                    data-id="2012" 
+                                    data-name="Soya Orgánica" 
+                                    data-price="8.5"
+                                    aria-label="Agregar al carrito">
+                                <i class="fas fa-cart-plus"></i> Agregar
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-3 mb-4">
+                <div class="card product-card h-100">
+                    <img src="assets/img/Granos y Legumbres/alverjas.jpg" class="card-img-top" alt="Alverjas">
+                    <div class="card-body">
+                        <h5 class="card-title">Alverjas Secas</h5>
+                        <p class="product-unit">Precio por kg</p>
+                        <p class="product-price">S/. 7.5</p>
+                        <div class="quantity-selector">
+                            <button class="btn btn-outline-secondary btn-sm" onclick="decrementQuantity(this)">-</button>
+                            <input type="number" class="form-control form-control-sm" value="1" min="1" readonly>
+                            <button class="btn btn-outline-secondary btn-sm" onclick="incrementQuantity(this)">+</button>
+                        </div>
+                        <div class="product-actions mt-3">
+                            <button class="btn btn-primary" onclick="addToCart(this)" 
+                                    data-id="2013" 
+                                    data-name="Alverjas Secas" 
+                                    data-price="7.5"
+                                    aria-label="Agregar al carrito">
+                                <i class="fas fa-cart-plus"></i> Agregar
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-3 mb-4">
+                <div class="card product-card h-100">
+                    <img src="assets/img/Granos y Legumbres/frijol-mung.jpg" class="card-img-top" alt="Frijol Mung">
+                    <div class="card-body">
+                        <h5 class="card-title">Frijol Mung Orgánico</h5>
+                        <p class="product-unit">Precio por 500g</p>
+                        <p class="product-price">S/. 6</p>
+                        <div class="quantity-selector">
+                            <button class="btn btn-outline-secondary btn-sm" onclick="decrementQuantity(this)">-</button>
+                            <input type="number" class="form-control form-control-sm" value="1" min="1" readonly>
+                            <button class="btn btn-outline-secondary btn-sm" onclick="incrementQuantity(this)">+</button>
+                        </div>
+                        <div class="product-actions mt-3">
+                            <button class="btn btn-primary" onclick="addToCart(this)" 
+                                    data-id="2014" 
+                                    data-name="Frijol Mung Orgánico" 
+                                    data-price="6"
+                                    aria-label="Agregar al carrito">
+                                <i class="fas fa-cart-plus"></i> Agregar
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-3 mb-4">
+                <div class="card product-card h-100">
+                    <img src="assets/img/Granos y Legumbres/Food/Legumbres Orgánicas/Frijoles Canarios.jpg" class="card-img-top" alt="Frijoles Canarios">
+                    <div class="card-body">
+                        <h5 class="card-title">Frijoles Canarios</h5>
+                        <p class="product-unit">Precio por kg</p>
+                        <p class="product-price">S/. 7</p>
+                        <div class="quantity-selector">
+                            <button class="btn btn-outline-secondary btn-sm" onclick="decrementQuantity(this)">-</button>
+                            <input type="number" class="form-control form-control-sm" value="1" min="1" readonly>
+                            <button class="btn btn-outline-secondary btn-sm" onclick="incrementQuantity(this)">+</button>
+                        </div>
+                        <div class="product-actions mt-3">
+                            <button class="btn btn-primary" onclick="addToCart(this)" 
+                                    data-id="2015" 
+                                    data-name="Frijoles Canarios" 
+                                    data-price="7"
+                                    aria-label="Agregar al carrito">
+                                <i class="fas fa-cart-plus"></i> Agregar
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-3 mb-4">
+                <div class="card product-card h-100">
+                    <img src="assets/img/Granos y Legumbres/pallares.jpg" class="card-img-top" alt="Pallares">
+                    <div class="card-body">
+                        <h5 class="card-title">Pallares Orgánicos</h5>
+                        <p class="product-unit">Precio por kg</p>
+                        <p class="product-price">S/. 9</p>
+                        <div class="quantity-selector">
+                            <button class="btn btn-outline-secondary btn-sm" onclick="decrementQuantity(this)">-</button>
+                            <input type="number" class="form-control form-control-sm" value="1" min="1" readonly>
+                            <button class="btn btn-outline-secondary btn-sm" onclick="incrementQuantity(this)">+</button>
+                        </div>
+                        <div class="product-actions mt-3">
+                            <button class="btn btn-primary" onclick="addToCart(this)" 
+                                    data-id="2016" 
+                                    data-name="Pallares Orgánicos" 
+                                    data-price="9"
+                                    aria-label="Agregar al carrito">
+                                <i class="fas fa-cart-plus"></i> Agregar
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Categoría: Mezclas Especiales -->
+    <div class="container my-5">
+        <h2 class="text-center mb-4 category-title">Mezclas Especiales</h2>
+        <p class="text-center text-muted">Combinaciones perfectas para preparar platillos nutritivos y deliciosos.</p>
+        <div class="row">
+            <!-- Product Cards -->
+            <div class="col-md-3 mb-4">
+                <div class="card product-card h-100">
+                    <img src="assets/img/Granos y Legumbres/Garbanzos.jpg" class="card-img-top" alt="Garbanzos">
+                    <div class="card-body">
+                        <h5 class="card-title">Garbanzos</h5>
+                        <p class="product-unit">Precio por kg</p>
+                        <p class="product-price">S/. 10</p>
+                        <div class="quantity-selector">
+                            <button class="btn btn-outline-secondary btn-sm" onclick="decrementQuantity(this)">-</button>
+                            <input type="number" class="form-control form-control-sm" value="1" min="1" readonly>
+                            <button class="btn btn-outline-secondary btn-sm" onclick="incrementQuantity(this)">+</button>
+                        </div>
+                        <div class="product-actions mt-3">
+                            <button class="btn btn-primary" onclick="addToCart(this)" 
+                                    data-id="2017" 
+                                    data-name="Garbanzos" 
+                                    data-price="10"
+                                    aria-label="Agregar al carrito">
+                                <i class="fas fa-cart-plus"></i> Agregar
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-3 mb-4">
+                <div class="card product-card h-100">
+                    <img src="assets/img/Granos y Legumbres/mezcla-andina.jpg" class="card-img-top" alt="Mezcla Andina">
+                    <div class="card-body">
+                        <h5 class="card-title">Mezcla Andina</h5>
+                        <p class="product-unit">Precio por 500g</p>
+                        <p class="product-price">S/. 9.5</p>
+                        <div class="quantity-selector">
+                            <button class="btn btn-outline-secondary btn-sm" onclick="decrementQuantity(this)">-</button>
+                            <input type="number" class="form-control form-control-sm" value="1" min="1" readonly>
+                            <button class="btn btn-outline-secondary btn-sm" onclick="incrementQuantity(this)">+</button>
+                        </div>
+                        <div class="product-actions mt-3">
+                            <button class="btn btn-primary" onclick="addToCart(this)" 
+                                    data-id="2018" 
+                                    data-name="Mezcla Andina" 
+                                    data-price="9.5"
+                                    aria-label="Agregar al carrito">
+                                <i class="fas fa-cart-plus"></i> Agregar
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-3 mb-4">
+                <div class="card product-card h-100">
+                    <img src="assets/img/Granos y Legumbres/cereales-desayuno.jpg" class="card-img-top" alt="Cereales para Desayuno">
+                    <div class="card-body">
+                        <h5 class="card-title">Cereales para Desayuno</h5>
+                        <p class="product-unit">Precio por 500g</p>
+                        <p class="product-price">S/. 11</p>
+                        <div class="quantity-selector">
+                            <button class="btn btn-outline-secondary btn-sm" onclick="decrementQuantity(this)">-</button>
+                            <input type="number" class="form-control form-control-sm" value="1" min="1" readonly>
+                            <button class="btn btn-outline-secondary btn-sm" onclick="incrementQuantity(this)">+</button>
+                        </div>
+                        <div class="product-actions mt-3">
+                            <button class="btn btn-primary" onclick="addToCart(this)" 
+                                    data-id="2019" 
+                                    data-name="Cereales para Desayuno" 
+                                    data-price="11"
+                                    aria-label="Agregar al carrito">
+                                <i class="fas fa-cart-plus"></i> Agregar
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-3 mb-4">
+                <div class="card product-card h-100">
+                    <img src="assets/img/Granos y Legumbres/mezcla-legumbres.jpg" class="card-img-top" alt="Mezcla de Legumbres">
+                    <div class="card-body">
+                        <h5 class="card-title">Mezcla de Legumbres</h5>
+                        <p class="product-unit">Precio por kg</p>
+                        <p class="product-price">S/. 12</p>
+                        <div class="quantity-selector">
+                            <button class="btn btn-outline-secondary btn-sm" onclick="decrementQuantity(this)">-</button>
+                            <input type="number" class="form-control form-control-sm" value="1" min="1" readonly>
+                            <button class="btn btn-outline-secondary btn-sm" onclick="incrementQuantity(this)">+</button>
+                        </div>
+                        <div class="product-actions mt-3">
+                            <button class="btn btn-primary" onclick="addToCart(this)" 
+                                    data-id="2020" 
+                                    data-name="Mezcla de Legumbres" 
+                                    data-price="12"
+                                    aria-label="Agregar al carrito">
+                                <i class="fas fa-cart-plus"></i> Agregar
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-3 mb-4">
+                <div class="card product-card h-100">
+                    <img src="assets/img/Granos y Legumbres/mezcla-ensaladas.jpg" class="card-img-top" alt="Mezcla para Ensaladas">
+                    <div class="card-body">
+                        <h5 class="card-title">Mezcla para Ensaladas</h5>
+                        <p class="product-unit">Precio por 500g</p>
+                        <p class="product-price">S/. 10.5</p>
+                        <div class="quantity-selector">
+                            <button class="btn btn-outline-secondary btn-sm" onclick="decrementQuantity(this)">-</button>
+                            <input type="number" class="form-control form-control-sm" value="1" min="1" readonly>
+                            <button class="btn btn-outline-secondary btn-sm" onclick="incrementQuantity(this)">+</button>
+                        </div>
+                        <div class="product-actions mt-3">
+                            <button class="btn btn-primary" onclick="addToCart(this)" 
+                                    data-id="2021" 
+                                    data-name="Mezcla para Ensaladas" 
+                                    data-price="10.5"
+                                    aria-label="Agregar al carrito">
+                                <i class="fas fa-cart-plus"></i> Agregar
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="bg-dark text-white py-5">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6">
+                    <h5>EcoMarket</h5>
+                    <p>Tu tienda de productos orgánicos y sostenibles.</p>
+                </div>
+                <div class="col-md-6 text-md-end">
+                    <a href="#" class="text-white me-3">Términos y Condiciones</a>
+                    <a href="#" class="text-white">Política de Privacidad</a>
+                </div>
+            </div>
+            <hr>
+            <div class="row">
+                <div class="col-md-6">
+                    <p class="mb-0">&copy; 2023 EcoMarket. Todos los derechos reservados.</p>
+                </div>
+                <div class="col-md-6 text-md-end">
+                    <a href="#" class="text-white me-3">Términos y Condiciones</a>
+                    <a href="#" class="text-white">Política de Privacidad</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>

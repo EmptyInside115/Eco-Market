@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EcoMarket - Productos Orgánicos</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.2.3/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="assets/css/styles.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/toastify-js/src/toastify.min.css">
+
+    <!-- Scripts -->
+    <script src="https://cdn.jsdelivr.net/npm/toastify-js/src/toastify.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.2.3/js/bootstrap.bundle.min.js"></script>
+    <script src="assets/js/Script.js" type="module"></script>
+</head>
+<body>
+
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-success fixed-top">
+        <div class="container">
+            <a class="navbar-brand" href="Main.html">
+                <img src="assets/img/icons/logo/Logo.png" alt="EcoMarket" width="120">
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" role="button" 
+                        data-bs-toggle="dropdown" aria-expanded="false">
+                            Categorías
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="Frutas y Verduras.html">Frutas y Verduras</a></li>
+                            <li><a class="dropdown-item" href="Granos y Legumbres.html">Granos y Legumbres</a></li>
+                            <li><a class="dropdown-item" href="Productos Elaborados.html">Productos Elaborados</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item"><a class="nav-link" href="Ofertas Especiales.html">Ofertas</a></li>
+                    <li class="nav-item"><a class="nav-link" href="Blog.html">Blog</a></li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" role="button" 
+                        data-bs-toggle="dropdown" aria-expanded="false">
+                            Nosotros
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="Sobre Nosotros.html">Conócenos</a></li>
+                            <li><a class="dropdown-item" href="Contacto.html">Contacto</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="Cart.html">
+                            <i class="fas fa-shopping-cart"></i>
+                            <span id="cart-count" class="badge bg-danger">0</span>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Contact Form Section -->
+    <section class="container mb-5">
+        <h2 class="text-center mb-4">Envíanos un Mensaje</h2>
+        <div class="row justify-content-center">
+            <div class="col-md-8">
+                <form id="contactForm" novalidate>
+                    <div class="mb-3">
+                        <label for="name" class="form-label">Nombre completo</label>
+                        <input type="text" class="form-control" id="name" name="name" 
+                               placeholder="Tu nombre completo" required 
+                               pattern="[A-Za-zÀ-ÿ\s]{2,}"
+                               aria-describedby="nameHelp">
+                        <div id="nameHelp" class="form-text">Por favor ingresa tu nombre completo.</div>
+                    </div>
+                    <div class="mb-3">
+                        <label for="email" class="form-label">Correo electrónico</label>
+                        <input type="email" class="form-control" id="email" name="email" 
+                               placeholder="tu.correo@ejemplo.com" required
+                               aria-describedby="emailHelp">
+                        <div id="emailHelp" class="form-text">Nunca compartiremos tu correo con terceros.</div>
+                    </div>
+                    <div class="mb-3">
+                        <label for="subject" class="form-label">Asunto</label>
+                        <input type="text" class="form-control" id="subject" name="subject" 
+                               placeholder="Asunto del mensaje" required
+                               minlength="4" maxlength="50"
+                               aria-describedby="subjectHelp">
+                        <div id="subjectHelp" class="form-text">Indica brevemente el motivo de tu mensaje.</div>
+                    </div>
+                    <div class="mb-3">
+                        <label for="message" class="form-label">Mensaje</label>
+                        <textarea class="form-control" id="message" name="message" 
+                                 rows="5" placeholder="Escribe tu mensaje aquí..." 
+                                 required minlength="10"
+                                 aria-describedby="messageHelp"></textarea>
+                        <div id="messageHelp" class="form-text">Tu mensaje debe contener al menos 10 caracteres.</div>
+                    </div>
+                    <button type="submit" class="btn btn-primary w-100">Enviar Mensaje</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Map Section -->
+    <section class="container mb-5">
+        <h2 class="text-center mb-4">Nuestra Ubicación</h2>
+        <div class="row justify-content-center">
+            <div class="col-md-10">
+                <div class="ratio ratio-16x9">
+                    <iframe 
+                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3153.835434509374!2d-122.41941548468132!3d37.77492927975986!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x80858064f0b8b1b1%3A0x4a0b8b1b1b1b1b1b!2sEcoMarket!5e0!3m2!1ses!2s!4v1680000000000!5m2!1ses!2s" 
+                        style="border:0;" 
+                        allowfullscreen="" 
+                        loading="lazy"
+                        title="Ubicación de EcoMarket"
+                        aria-label="Mapa mostrando la ubicación de nuestra tienda EcoMarket">
+                    </iframe>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-dark text-white py-4">
+        <div class="container text-center">
+            <p>&copy; 2023 EcoMarket. Todos los derechos reservados.</p>
+        </div>
+    </footer>
+</body>
+</html>

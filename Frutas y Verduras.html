@@ -1,0 +1,1060 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EcoMarket - Productos Orgánicos</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.2.3/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="assets/css/styles.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/toastify-js/src/toastify.min.css">
+
+    <!-- Scripts -->
+    <script src="https://cdn.jsdelivr.net/npm/toastify-js/src/toastify.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.2.3/js/bootstrap.bundle.min.js"></script>
+    <script src="assets/js/Script.js" type="module"></script>
+</head>
+<body>
+
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-success fixed-top">
+        <div class="container">
+            <a class="navbar-brand" href="Main.html">
+                <img src="assets/img/icons/logo/Logo.png" alt="EcoMarket" width="120">
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" role="button" 
+                        data-bs-toggle="dropdown" aria-expanded="false">
+                            Categorías
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="Frutas y Verduras.html">Frutas y Verduras</a></li>
+                            <li><a class="dropdown-item" href="Granos y Legumbres.html">Granos y Legumbres</a></li>
+                            <li><a class="dropdown-item" href="Productos Elaborados.html">Productos Elaborados</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item"><a class="nav-link" href="Ofertas Especiales.html">Ofertas</a></li>
+                    <li class="nav-item"><a class="nav-link" href="Blog.html">Blog</a></li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" role="button" 
+                        data-bs-toggle="dropdown" aria-expanded="false">
+                            Nosotros
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="Sobre Nosotros.html">Conócenos</a></li>
+                            <li><a class="dropdown-item" href="Contacto.html">Contacto</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="Cart.html">
+                            <i class="fas fa-shopping-cart"></i>
+                            <span id="cart-count" class="badge bg-danger">0</span>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Banner principal -->
+     <div class="main-banner mt-5">
+        <img src="assets/img/Frutas y Verduras/Head/Banner1.png"
+        class="d-block w-100" 
+         alt="Frutas y Verduras" 
+         style="object-fit: cover; height: 500px;">
+    </div>
+
+    <!-- Categoría: Frutas -->
+    <div class="container my-5">
+        <br></br><h2 class="text-center mb-4 category-title">Frutas Frescas</h2>
+        <p class="text-center text-muted">Nuestras frutas frescas son seleccionadas cuidadosamente para garantizar la mejor calidad y sabor. Disponibilidad y precios sujetos a temporada.</p>
+        <div class="row">
+            <!-- Manzana Roja -->
+            <div class="col-md-3 mb-4">
+                <div class="card product-card h-100">
+                    <img src="assets/img/Frutas y Verduras/Food/Frutas Frescas/Manzanas Rojas.jpg" class="card-img-top lazy-image" loading="lazy" onerror="handleImageError(this)" alt="Manzana Roja">
+                    <div class="card-body">
+                        <h5 class="card-title">Manzana Roja</h5>
+                        <p class="product-unit">Precio por kg</p>
+                        <p class="product-price">S/. 5.50 - 7.00</p>
+                        <div class="quantity-selector">
+                            <button class="btn btn-outline-secondary btn-sm" onclick="decrementQuantity(this)">-</button>
+                            <input type="number" class="form-control form-control-sm quantity" value="1" min="1" readonly>
+                            <button class="btn btn-outline-secondary btn-sm" onclick="incrementQuantity(this)">+</button>
+                        </div>
+                        <div class="product-actions mt-3">
+                            <button class="btn btn-primary" data-id="1001" onclick="addToCart(this)">
+                                <i class="fas fa-cart-plus"></i> Agregar
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Manzana Verde -->
+            <div class="col-md-3 mb-4">
+                <div class="card product-card h-100">
+                    <img src="assets/img/Frutas y Verduras/Food/Frutas Frescas/Manzanas Verdes.jpg" class="card-img-top lazy-image" loading="lazy" onerror="handleImageError(this)" alt="Manzana Verde">
+                    <div class="card-body">
+                        <h5 class="card-title">Manzana Verde</h5>
+                        <p class="product-unit">Precio por kg</p>
+                        <p class="product-price">S/. 6.00 - 7.50</p>
+                        <div class="quantity-selector">
+                            <button class="btn btn-outline-secondary btn-sm" onclick="decrementQuantity(this)">-</button>
+                            <input type="number" class="form-control form-control-sm quantity" value="1" min="1" readonly>
+                            <button class="btn btn-outline-secondary btn-sm" onclick="incrementQuantity(this)">+</button>
+                        </div>
+                        <div class="product-actions mt-3">
+                            <button class="btn btn-primary" data-id="1002" onclick="addToCart(this)">
+                                <i class="fas fa-cart-plus"></i> Agregar
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Plátanos -->
+            <div class="col-md-3 mb-4">
+                <div class="card product-card h-100">
+                    <img src="assets/img/Frutas y Verduras/Food/Frutas Frescas/Platanos.jpg" class="card-img-top lazy-image" loading="lazy" onerror="handleImageError(this)" alt="Plátanos">
+                    <div class="card-body">
+                        <h5 class="card-title">Plátanos</h5>
+                        <p class="product-unit">Precio por kg</p>
+                        <p class="product-price">S/. 3.50 - 4.50</p>
+                        <div class="quantity-selector">
+                            <button class="btn btn-outline-secondary btn-sm" onclick="decrementQuantity(this)">-</button>
+                            <input type="number" class="form-control form-control-sm quantity" value="1" min="1" readonly>
+                            <button class="btn btn-outline-secondary btn-sm" onclick="incrementQuantity(this)">+</button>
+                        </div>
+                        <div class="product-actions mt-3">
+                            <button class="btn btn-primary" data-id="1003" onclick="addToCart(this)">
+                                <i class="fas fa-cart-plus"></i> Agregar
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Naranjas -->
+            <div class="col-md-3 mb-4">
+                <div class="card product-card h-100">
+                    <img src="assets/img/Frutas y Verduras/Food/Frutas Frescas/Naranjas.jpg" class="card-img-top lazy-image" loading="lazy" onerror="handleImageError(this)" alt="Naranjas">
+                    <div class="card-body">
+                        <h5 class="card-title">Naranjas</h5>
+                        <p class="product-unit">Precio por kg</p>
+                        <p class="product-price">S/. 4.00 - 5.50</p>
+                        <div class="quantity-selector">
+                            <button class="btn btn-outline-secondary btn-sm" onclick="decrementQuantity(this)">-</button>
+                            <input type="number" class="form-control form-control-sm quantity" value="1" min="1" readonly>
+                            <button class="btn btn-outline-secondary btn-sm" onclick="incrementQuantity(this)">+</button>
+                        </div>
+                        <div class="product-actions mt-3">
+                            <button class="btn btn-primary" data-id="1004" onclick="addToCart(this)">
+                                <i class="fas fa-cart-plus"></i> Agregar
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Mandarina -->
+            <div class="col-md-3 mb-4">
+                <div class="card product-card h-100">
+                    <img src="assets/img/Frutas y Verduras/Food/Frutas Frescas/Mandarina.jpg" class="card-img-top lazy-image" loading="lazy" onerror="handleImageError(this)" alt="Mandarina">
+                    <div class="card-body">
+                        <h5 class="card-title">Mandarina</h5>
+                        <p class="product-unit">Precio por kg</p>
+                        <p class="product-price">S/. 4.50 - 6.00</p>
+                        <div class="quantity-selector">
+                            <button class="btn btn-outline-secondary btn-sm" onclick="decrementQuantity(this)">-</button>
+                            <input type="number" class="form-control form-control-sm quantity" value="1" min="1" readonly>
+                            <button class="btn btn-outline-secondary btn-sm" onclick="incrementQuantity(this)">+</button>
+                        </div>
+                        <div class="product-actions mt-3">
+                            <button class="btn btn-primary" data-id="1005" onclick="addToCart(this)">
+                                <i class="fas fa-cart-plus"></i> Agregar
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Limón -->
+            <div class="col-md-3 mb-4">
+                <div class="card product-card h-100">
+                    <img src="assets/img/Frutas y Verduras/Food/Frutas Frescas/Limon.jpg" class="card-img-top lazy-image" loading="lazy" onerror="handleImageError(this)" alt="Limón">
+                    <div class="card-body">
+                        <h5 class="card-title">Limón</h5>
+                        <p class="product-unit">Precio por kg</p>
+                        <p class="product-price">S/. 3.00 - 4.50</p>
+                        <div class="quantity-selector">
+                            <button class="btn btn-outline-secondary btn-sm" onclick="decrementQuantity(this)">-</button>
+                            <input type="number" class="form-control form-control-sm quantity" value="1" min="1" readonly>
+                            <button class="btn btn-outline-secondary btn-sm" onclick="incrementQuantity(this)">+</button>
+                        </div>
+                        <div class="product-actions mt-3">
+                            <button class="btn btn-primary" data-id="1006" onclick="addToCart(this)">
+                                <i class="fas fa-cart-plus"></i> Agregar
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Fresas -->
+            <div class="col-md-3 mb-4">
+                <div class="card product-card h-100">
+                    <img src="assets/img/Frutas y Verduras/Food/Frutas Frescas/Fresas.jpg" class="card-img-top lazy-image" loading="lazy" onerror="handleImageError(this)" alt="Fresas">
+                    <div class="card-body">
+                        <h5 class="card-title">Fresas</h5>
+                        <p class="product-unit">Precio por kg</p>
+                        <p class="product-price">S/. 12.00 - 15.00</p>
+                        <div class="quantity-selector">
+                            <button class="btn btn-outline-secondary btn-sm" onclick="decrementQuantity(this)">-</button>
+                            <input type="number" class="form-control form-control-sm quantity" value="1" min="1" readonly>
+                            <button class="btn btn-outline-secondary btn-sm" onclick="incrementQuantity(this)">+</button>
+                        </div>
+                        <div class="product-actions mt-3">
+                            <button class="btn btn-primary" data-id="1007" onclick="addToCart(this)">
+                                <i class="fas fa-cart-plus"></i> Agregar
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Uvas Verdes -->
+            <div class="col-md-3 mb-4">
+                <div class="card product-card h-100">
+                    <img src="assets/img/Frutas y Verduras/Food/Frutas Frescas/Uvas Verdes.jpg" class="card-img-top lazy-image" loading="lazy" onerror="handleImageError(this)" alt="Uvas Verdes">
+                    <div class="card-body">
+                        <h5 class="card-title">Uvas Verdes</h5>
+                        <p class="product-unit">Precio por kg</p>
+                        <p class="product-price">S/. 8.50 - 10.00</p>
+                        <div class="quantity-selector">
+                            <button class="btn btn-outline-secondary btn-sm" onclick="decrementQuantity(this)">-</button>
+                            <input type="number" class="form-control form-control-sm quantity" value="1" min="1" readonly>
+                            <button class="btn btn-outline-secondary btn-sm" onclick="incrementQuantity(this)">+</button>
+                        </div>
+                        <div class="product-actions mt-3">
+                            <button class="btn btn-primary" data-id="1008" onclick="addToCart(this)">
+                                <i class="fas fa-cart-plus"></i> Agregar
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Uvas Rojas -->
+            <div class="col-md-3 mb-4">
+                <div class="card product-card h-100">
+                    <img src="assets/img/Frutas y Verduras/Food/Frutas Frescas/Uvas Rojas.jpg" class="card-img-top lazy-image" loading="lazy" onerror="handleImageError(this)" alt="Uvas Rojas">
+                    <div class="card-body">
+                        <h5 class="card-title">Uvas Rojas</h5>
+                        <p class="product-unit">Precio por kg</p>
+                        <p class="product-price">S/. 9.00 - 11.00</p>
+                        <div class="quantity-selector">
+                            <button class="btn btn-outline-secondary btn-sm" onclick="decrementQuantity(this)">-</button>
+                            <input type="number" class="form-control form-control-sm quantity" value="1" min="1" readonly>
+                            <button class="btn btn-outline-secondary btn-sm" onclick="incrementQuantity(this)">+</button>
+                        </div>
+                        <div class="product-actions mt-3">
+                            <button class="btn btn-primary" data-id="1009" onclick="addToCart(this)">
+                                <i class="fas fa-cart-plus"></i> Agregar
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Kiwi -->
+            <div class="col-md-3 mb-4">
+                <div class="card product-card h-100">
+                    <img src="assets/img/Frutas y Verduras/Food/Frutas Frescas/Kiwi.jpg" class="card-img-top lazy-image" loading="lazy" onerror="handleImageError(this)" alt="Kiwi">
+                    <div class="card-body">
+                        <h5 class="card-title">Kiwi</h5>
+                        <p class="product-unit">Precio por kg</p>
+                        <p class="product-price">S/. 12.00 - 15.00</p>
+                        <div class="quantity-selector">
+                            <button class="btn btn-outline-secondary btn-sm" onclick="decrementQuantity(this)">-</button>
+                            <input type="number" class="form-control form-control-sm quantity" value="1" min="1" readonly>
+                            <button class="btn btn-outline-secondary btn-sm" onclick="incrementQuantity(this)">+</button>
+                        </div>
+                        <div class="product-actions mt-3">
+                            <button class="btn btn-primary" data-id="1010" onclick="addToCart(this)">
+                                <i class="fas fa-cart-plus"></i> Agregar
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Durazno -->
+            <div class="col-md-3 mb-4">
+                <div class="card product-card h-100">
+                    <img src="assets/img/Frutas y Verduras/Food/Frutas Frescas/Durazno.jpg" class="card-img-top lazy-image" loading="lazy" onerror="handleImageError(this)" alt="Durazno">
+                    <div class="card-body">
+                        <h5 class="card-title">Durazno</h5>
+                        <p class="product-unit">Precio por kg</p>
+                        <p class="product-price">S/. 8.00 - 10.00</p>
+                        <div class="quantity-selector">
+                            <button class="btn btn-outline-secondary btn-sm" onclick="decrementQuantity(this)">-</button>
+                            <input type="number" class="form-control form-control-sm quantity" value="1" min="1" readonly>
+                            <button class="btn btn-outline-secondary btn-sm" onclick="incrementQuantity(this)">+</button>
+                        </div>
+                        <div class="product-actions mt-3">
+                            <button class="btn btn-primary" data-id="1011" onclick="addToCart(this)">
+                                <i class="fas fa-cart-plus"></i> Agregar
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Mango -->
+            <div class="col-md-3 mb-4">
+                <div class="card product-card h-100">
+                    <img src="assets/img/Frutas y Verduras/Food/Frutas Frescas/Mango.jpg" class="card-img-top lazy-image" loading="lazy" onerror="handleImageError(this)" alt="Mango">
+                    <div class="card-body">
+                        <h5 class="card-title">Mango</h5>
+                        <p class="product-unit">Precio por kg</p>
+                        <p class="product-price">S/. 6.50 - 8.00</p>
+                        <div class="quantity-selector">
+                            <button class="btn btn-outline-secondary btn-sm" onclick="decrementQuantity(this)">-</button>
+                            <input type="number" class="form-control form-control-sm quantity" value="1" min="1" readonly>
+                            <button class="btn btn-outline-secondary btn-sm" onclick="incrementQuantity(this)">+</button>
+                        </div>
+                        <div class="product-actions mt-3">
+                            <button class="btn btn-primary" data-id="1012" onclick="addToCart(this)">
+                                <i class="fas fa-cart-plus"></i> Agregar
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Papaya -->
+            <div class="col-md-3 mb-4">
+                <div class="card product-card h-100">
+                    <img src="assets/img/Frutas y Verduras/Food/Frutas Frescas/Papaya.jpg" class="card-img-top lazy-image" loading="lazy" onerror="handleImageError(this)" alt="Papaya">
+                    <div class="card-body">
+                        <h5 class="card-title">Papaya</h5>
+                        <p class="product-unit">Precio por unidad</p>
+                        <p class="product-price">S/. 7.00 - 10.00</p>
+                        <div class="quantity-selector">
+                            <button class="btn btn-outline-secondary btn-sm" onclick="decrementQuantity(this)">-</button>
+                            <input type="number" class="form-control form-control-sm quantity" value="1" min="1" readonly>
+                            <button class="btn btn-outline-secondary btn-sm" onclick="incrementQuantity(this)">+</button>
+                        </div>
+                        <div class="product-actions mt-3">
+                            <button class="btn btn-primary" data-id="1013" onclick="addToCart(this)">
+                                <i class="fas fa-cart-plus"></i> Agregar
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Piña -->
+            <div class="col-md-3 mb-4">
+                <div class="card product-card h-100">
+                    <img src="assets/img/Frutas y Verduras/Food/Frutas Frescas/Piña.jpg" class="card-img-top lazy-image" loading="lazy" onerror="handleImageError(this)" alt="Piña">
+                    <div class="card-body">
+                        <h5 class="card-title">Piña</h5>
+                        <p class="product-unit">Precio por unidad</p>
+                        <p class="product-price">S/. 6.00 - 8.50</p>
+                        <div class="quantity-selector">
+                            <button class="btn btn-outline-secondary btn-sm" onclick="decrementQuantity(this)">-</button>
+                            <input type="number" class="form-control form-control-sm quantity" value="1" min="1" readonly>
+                            <button class="btn btn-outline-secondary btn-sm" onclick="incrementQuantity(this)">+</button>
+                        </div>
+                        <div class="product-actions mt-3">
+                            <button class="btn btn-primary" data-id="1014" onclick="addToCart(this)">
+                                <i class="fas fa-cart-plus"></i> Agregar
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Sandía -->
+            <div class="col-md-3 mb-4">
+                <div class="card product-card h-100">
+                    <img src="assets/img/Frutas y Verduras/Food/Frutas Frescas/Sandia.jpg" class="card-img-top lazy-image" loading="lazy" onerror="handleImageError(this)" alt="Sandía">
+                    <div class="card-body">
+                        <h5 class="card-title">Sandía</h5>
+                        <p class="product-unit">Precio por kg</p>
+                        <p class="product-price">S/. 3.50 - 5.00</p>
+                        <div class="quantity-selector">
+                            <button class="btn btn-outline-secondary btn-sm" onclick="decrementQuantity(this)">-</button>
+                            <input type="number" class="form-control form-control-sm quantity" value="1" min="1" readonly>
+                            <button class="btn btn-outline-secondary btn-sm" onclick="incrementQuantity(this)">+</button>
+                        </div>
+                        <div class="product-actions mt-3">
+                            <button class="btn btn-primary" data-id="1015" onclick="addToCart(this)">
+                                <i class="fas fa-cart-plus"></i> Agregar
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Maracuyá -->
+            <div class="col-md-3 mb-4">
+                <div class="card product-card h-100">
+                    <img src="assets/img/Frutas y Verduras/Food/Frutas Frescas/Maracuyá.jpg" class="card-img-top lazy-image" loading="lazy" onerror="handleImageError(this)" alt="Maracuyá">
+                    <div class="card-body">
+                        <h5 class="card-title">Maracuyá</h5>
+                        <p class="product-unit">Precio por kg</p>
+                        <p class="product-price">S/. 5.00 - 7.00</p>
+                        <div class="quantity-selector">
+                            <button class="btn btn-outline-secondary btn-sm" onclick="decrementQuantity(this)">-</button>
+                            <input type="number" class="form-control form-control-sm quantity" value="1" min="1" readonly>
+                            <button class="btn btn-outline-secondary btn-sm" onclick="incrementQuantity(this)">+</button>
+                        </div>
+                        <div class="product-actions mt-3">
+                            <button class="btn btn-primary" data-id="1016" onclick="addToCart(this)">
+                                <i class="fas fa-cart-plus"></i> Agregar
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Palta -->
+            <div class="col-md-3 mb-4">
+                <div class="card product-card h-100">
+                    <img src="assets/img/Frutas y Verduras/Food/Frutas Frescas/Palta.jpg" class="card-img-top lazy-image" loading="lazy" onerror="handleImageError(this)" alt="Palta">
+                    <div class="card-body">
+                        <h5 class="card-title">Palta</h5>
+                        <p class="product-unit">Precio por kg</p>
+                        <p class="product-price">S/. 8.00 - 12.00</p>
+                        <div class="quantity-selector">
+                            <button class="btn btn-outline-secondary btn-sm" onclick="decrementQuantity(this)">-</button>
+                            <input type="number" class="form-control form-control-sm quantity" value="1" min="1" readonly>
+                            <button class="btn btn-outline-secondary btn-sm" onclick="incrementQuantity(this)">+</button>
+                        </div>
+                        <div class="product-actions mt-3">
+                            <button class="btn btn-primary" data-id="1017" onclick="addToCart(this)">
+                                <i class="fas fa-cart-plus"></i> Agregar
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Categoría: Verduras -->
+    <div class="container my-5">
+        <h2 class="text-center mb-4 category-title">Verduras Frescas</h2>
+        <p class="text-center text-muted">Nuestras verduras frescas son cultivadas de manera sostenible y cosechadas en su punto óptimo. Disponibilidad y precios sujetos a temporada.</p>
+        <div class="row">
+            <!-- Papa -->
+            <div class="col-md-3 mb-4">
+                <div class="card product-card h-100">
+                    <img src="assets/img/Frutas y Verduras/Food/Verduras Frescas/Papa.jpg" class="card-img-top lazy-image" loading="lazy" onerror="handleImageError(this)" alt="Papa">
+                    <div class="card-body">
+                        <h5 class="card-title">Papa</h5>
+                        <p class="product-unit">Precio por kg</p>
+                        <p class="product-price">S/. 3.00 - 4.50</p>
+                        <div class="quantity-selector">
+                            <button class="btn btn-outline-secondary btn-sm" onclick="decrementQuantity(this)">-</button>
+                            <input type="number" class="form-control form-control-sm quantity" value="1" min="1" readonly>
+                            <button class="btn btn-outline-secondary btn-sm" onclick="incrementQuantity(this)">+</button>
+                        </div>
+                        <div class="product-actions mt-3">
+                            <button class="btn btn-primary" data-id="2001" onclick="addToCart(this)">
+                                <i class="fas fa-cart-plus"></i> Agregar
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Cebolla -->
+            <div class="col-md-3 mb-4">
+                <div class="card product-card h-100">
+                    <img src="assets/img/Frutas y Verduras/Food/Verduras Frescas/Cebollas.jpg" class="card-img-top lazy-image" loading="lazy" onerror="handleImageError(this)" alt="Cebolla">
+                    <div class="card-body">
+                        <h5 class="card-title">Cebolla</h5>
+                        <p class="product-unit">Precio por kg</p>
+                        <p class="product-price">S/. 2.50 - 4.00</p>
+                        <div class="quantity-selector">
+                            <button class="btn btn-outline-secondary btn-sm" onclick="decrementQuantity(this)">-</button>
+                            <input type="number" class="form-control form-control-sm quantity" value="1" min="1" readonly>
+                            <button class="btn btn-outline-secondary btn-sm" onclick="incrementQuantity(this)">+</button>
+                        </div>
+                        <div class="product-actions mt-3">
+                            <button class="btn btn-primary" data-id="2002" onclick="addToCart(this)">
+                                <i class="fas fa-cart-plus"></i> Agregar
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Tomate -->
+            <div class="col-md-3 mb-4">
+                <div class="card product-card h-100">
+                    <img src="assets/img/Frutas y Verduras/Food/Verduras Frescas/Tomates.jpg" class="card-img-top lazy-image" loading="lazy" onerror="handleImageError(this)" alt="Tomate">
+                    <div class="card-body">
+                        <h5 class="card-title">Tomate</h5>
+                        <p class="product-unit">Precio por kg</p>
+                        <p class="product-price">S/. 3.00 - 5.00</p>
+                        <div class="quantity-selector">
+                            <button class="btn btn-outline-secondary btn-sm" onclick="decrementQuantity(this)">-</button>
+                            <input type="number" class="form-control form-control-sm quantity" value="1" min="1" readonly>
+                            <button class="btn btn-outline-secondary btn-sm" onclick="incrementQuantity(this)">+</button>
+                        </div>
+                        <div class="product-actions mt-3">
+                            <button class="btn btn-primary" data-id="2003" onclick="addToCart(this)">
+                                <i class="fas fa-cart-plus"></i> Agregar
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Zanahoria -->
+            <div class="col-md-3 mb-4">
+                <div class="card product-card h-100">
+                    <img src="assets/img/Frutas y Verduras/Food/Verduras Frescas/Zanahorias.jpg" class="card-img-top lazy-image" loading="lazy" onerror="handleImageError(this)" alt="Zanahoria">
+                    <div class="card-body">
+                        <h5 class="card-title">Zanahoria</h5>
+                        <p class="product-unit">Precio por kg</p>
+                        <p class="product-price">S/. 2.00 - 3.50</p>
+                        <div class="quantity-selector">
+                            <button class="btn btn-outline-secondary btn-sm" onclick="decrementQuantity(this)">-</button>
+                            <input type="number" class="form-control form-control-sm quantity" value="1" min="1" readonly>
+                            <button class="btn btn-outline-secondary btn-sm" onclick="incrementQuantity(this)">+</button>
+                        </div>
+                        <div class="product-actions mt-3">
+                            <button class="btn btn-primary" data-id="2004" onclick="addToCart(this)">
+                                <i class="fas fa-cart-plus"></i> Agregar
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Lechuga -->
+            <div class="col-md-3 mb-4">
+                <div class="card product-card h-100">
+                    <img src="assets/img/Frutas y Verduras/Food/Verduras Frescas/Lechuga Romana.jpg" class="card-img-top lazy-image" loading="lazy" onerror="handleImageError(this)" alt="Lechuga">
+                    <div class="card-body">
+                        <h5 class="card-title">Lechuga</h5>
+                        <p class="product-unit">Precio por unidad</p>
+                        <p class="product-price">S/. 1.50 - 2.50</p>
+                        <div class="quantity-selector">
+                            <button class="btn btn-outline-secondary btn-sm" onclick="decrementQuantity(this)">-</button>
+                            <input type="number" class="form-control form-control-sm quantity" value="1" min="1" readonly>
+                            <button class="btn btn-outline-secondary btn-sm" onclick="incrementQuantity(this)">+</button>
+                        </div>
+                        <div class="product-actions mt-3">
+                            <button class="btn btn-primary" data-id="2005" onclick="addToCart(this)">
+                                <i class="fas fa-cart-plus"></i> Agregar
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Brócoli -->
+            <div class="col-md-3 mb-4">
+                <div class="card product-card h-100">
+                    <img src="assets/img/Frutas y Verduras/Food/Verduras Frescas/Brócoli Orgánico.jpg" class="card-img-top lazy-image" loading="lazy" onerror="handleImageError(this)" alt="Brócoli">
+                    <div class="card-body">
+                        <h5 class="card-title">Brócoli</h5>
+                        <p class="product-unit">Precio por unidad</p>
+                        <p class="product-price">S/. 2.00 - 3.50</p>
+                        <div class="quantity-selector">
+                            <button class="btn btn-outline-secondary btn-sm" onclick="decrementQuantity(this)">-</button>
+                            <input type="number" class="form-control form-control-sm quantity" value="1" min="1" readonly>
+                            <button class="btn btn-outline-secondary btn-sm" onclick="incrementQuantity(this)">+</button>
+                        </div>
+                        <div class="product-actions mt-3">
+                            <button class="btn btn-primary" data-id="2006" onclick="addToCart(this)">
+                                <i class="fas fa-cart-plus"></i> Agregar
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Coliflor -->
+            <div class="col-md-3 mb-4">
+                <div class="card product-card h-100">
+                    <img src="assets/img/Frutas y Verduras/Food/Verduras Frescas/Coliflor.jpg" class="card-img-top lazy-image" loading="lazy" onerror="handleImageError(this)" alt="Coliflor">
+                    <div class="card-body">
+                        <h5 class="card-title">Coliflor</h5>
+                        <p class="product-unit">Precio por unidad</p>
+                        <p class="product-price">S/. 3.50 - 5.00</p>
+                        <div class="quantity-selector">
+                            <button class="btn btn-outline-secondary btn-sm" onclick="decrementQuantity(this)">-</button>
+                            <input type="number" class="form-control form-control-sm quantity" value="1" min="1" readonly>
+                            <button class="btn btn-outline-secondary btn-sm" onclick="incrementQuantity(this)">+</button>
+                        </div>
+                        <div class="product-actions mt-3">
+                            <button class="btn btn-primary" data-id="2007" onclick="addToCart(this)">
+                                <i class="fas fa-cart-plus"></i> Agregar
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Pimiento -->
+            <div class="col-md-3 mb-4">
+                <div class="card product-card h-100">
+                    <img src="assets/img/Frutas y Verduras/Food/Verduras Frescas/Pimientos Tricolor.jpg" class="card-img-top lazy-image" loading="lazy" onerror="handleImageError(this)" alt="Pimiento">
+                    <div class="card-body">
+                        <h5 class="card-title">Pimiento</h5>
+                        <p class="product-unit">Precio por kg</p>
+                        <p class="product-price">S/. 4.50 - 6.00</p>
+                        <div class="quantity-selector">
+                            <button class="btn btn-outline-secondary btn-sm" onclick="decrementQuantity(this)">-</button>
+                            <input type="number" class="form-control form-control-sm quantity" value="1" min="1" readonly>
+                            <button class="btn btn-outline-secondary btn-sm" onclick="incrementQuantity(this)">+</button>
+                        </div>
+                        <div class="product-actions mt-3">
+                            <button class="btn btn-primary" data-id="2008" onclick="addToCart(this)">
+                                <i class="fas fa-cart-plus"></i> Agregar
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Zapallo -->
+            <div class="col-md-3 mb-4">
+                <div class="card product-card h-100">
+                    <img src="assets/img/Frutas y Verduras/Food/Verduras Frescas/Zapallo.jpg" class="card-img-top lazy-image" loading="lazy" onerror="handleImageError(this)" alt="Zapallo">
+                    <div class="card-body">
+                        <h5 class="card-title">Zapallo</h5>
+                        <p class="product-unit">Precio por kg</p>
+                        <p class="product-price">S/. 2.50 - 4.00</p>
+                        <div class="quantity-selector">
+                            <button class="btn btn-outline-secondary btn-sm" onclick="decrementQuantity(this)">-</button>
+                            <input type="number" class="form-control form-control-sm quantity" value="1" min="1" readonly>
+                            <button class="btn btn-outline-secondary btn-sm" onclick="incrementQuantity(this)">+</button>
+                        </div>
+                        <div class="product-actions mt-3">
+                            <button class="btn btn-primary" data-id="2009" onclick="addToCart(this)">
+                                <i class="fas fa-cart-plus"></i> Agregar
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Choclo -->
+            <div class="col-md-3 mb-4">
+                <div class="card product-card h-100">
+                    <img src="assets/img/Frutas y Verduras/Food/Verduras Frescas/Choclo.jpg" class="card-img-top lazy-image" loading="lazy" onerror="handleImageError(this)" alt="Choclo">
+                    <div class="card-body">
+                        <h5 class="card-title">Choclo</h5>
+                        <p class="product-unit">Precio por unidad</p>
+                        <p class="product-price">S/. 1.50 - 2.50</p>
+                        <div class="quantity-selector">
+                            <button class="btn btn-outline-secondary btn-sm" onclick="decrementQuantity(this)">-</button>
+                            <input type="number" class="form-control form-control-sm quantity" value="1" min="1" readonly>
+                            <button class="btn btn-outline-secondary btn-sm" onclick="incrementQuantity(this)">+</button>
+                        </div>
+                        <div class="product-actions mt-3">
+                            <button class="btn btn-primary" data-id="2010" onclick="addToCart(this)">
+                                <i class="fas fa-cart-plus"></i> Agregar
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Vainitas -->
+            <div class="col-md-3 mb-4">
+                <div class="card product-card h-100">
+                    <img src="assets/img/Frutas y Verduras/Food/Verduras Frescas/Vainitas.jpg" class="card-img-top lazy-image" loading="lazy" onerror="handleImageError(this)" alt="Vainitas">
+                    <div class="card-body">
+                        <h5 class="card-title">Vainitas</h5>
+                        <p class="product-unit">Precio por kg</p>
+                        <p class="product-price">S/. 4.00 - 6.00</p>
+                        <div class="quantity-selector">
+                            <button class="btn btn-outline-secondary btn-sm" onclick="decrementQuantity(this)">-</button>
+                            <input type="number" class="form-control form-control-sm quantity" value="1" min="1" readonly>
+                            <button class="btn btn-outline-secondary btn-sm" onclick="incrementQuantity(this)">+</button>
+                        </div>
+                        <div class="product-actions mt-3">
+                            <button class="btn btn-primary" data-id="2011" onclick="addToCart(this)">
+                                <i class="fas fa-cart-plus"></i> Agregar
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Espinaca -->
+            <div class="col-md-3 mb-4">
+                <div class="card product-card h-100">
+                    <img src="assets/img/Frutas y Verduras/Food/Verduras Frescas/Espinacas.jpg" class="card-img-top lazy-image" loading="lazy" onerror="handleImageError(this)" alt="Espinaca">
+                    <div class="card-body">
+                        <h5 class="card-title">Espinaca</h5>
+                        <p class="product-unit">Precio por atado</p>
+                        <p class="product-price">S/. 3.00 - 5.00</p>
+                        <div class="quantity-selector">
+                            <button class="btn btn-outline-secondary btn-sm" onclick="decrementQuantity(this)">-</button>
+                            <input type="number" class="form-control form-control-sm quantity" value="1" min="1" readonly>
+                            <button class="btn btn-outline-secondary btn-sm" onclick="incrementQuantity(this)">+</button>
+                        </div>
+                        <div class="product-actions mt-3">
+                            <button class="btn btn-primary" data-id="2012" onclick="addToCart(this)">
+                                <i class="fas fa-cart-plus"></i> Agregar
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Camote -->
+            <div class="col-md-3 mb-4">
+                <div class="card product-card h-100">
+                    <img src="assets/img/Frutas y Verduras/Food/Verduras Frescas/Camote.jpg" class="card-img-top lazy-image" loading="lazy" onerror="handleImageError(this)" alt="Camote">
+                    <div class="card-body">
+                        <h5 class="card-title">Camote</h5>
+                        <p class="product-unit">Precio por kg</p>
+                        <p class="product-price">S/. 2.00 - 3.50</p>
+                        <div class="quantity-selector">
+                            <button class="btn btn-outline-secondary btn-sm" onclick="decrementQuantity(this)">-</button>
+                            <input type="number" class="form-control form-control-sm quantity" value="1" min="1" readonly>
+                            <button class="btn btn-outline-secondary btn-sm" onclick="incrementQuantity(this)">+</button>
+                        </div>
+                        <div class="product-actions mt-3">
+                            <button class="btn btn-primary" data-id="2013" onclick="addToCart(this)">
+                                <i class="fas fa-cart-plus"></i> Agregar
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Ají amarillo -->
+            <div class="col-md-3 mb-4">
+                <div class="card product-card h-100">
+                    <img src="assets/img/Frutas y Verduras/Food/Verduras Frescas/Aji Amarillo.jpg" class="card-img-top lazy-image" loading="lazy" onerror="handleImageError(this)" alt="Ají amarillo">
+                    <div class="card-body">
+                        <h5 class="card-title">Ají amarillo</h5>
+                        <p class="product-unit">Precio por kg</p>
+                        <p class="product-price">S/. 5.00 - 8.00</p>
+                        <div class="quantity-selector">
+                            <button class="btn btn-outline-secondary btn-sm" onclick="decrementQuantity(this)">-</button>
+                            <input type="number" class="form-control form-control-sm quantity" value="1" min="1" readonly>
+                            <button class="btn btn-outline-secondary btn-sm" onclick="incrementQuantity(this)">+</button>
+                        </div>
+                        <div class="product-actions mt-3">
+                            <button class="btn btn-primary" data-id="2014" onclick="addToCart(this)">
+                                <i class="fas fa-cart-plus"></i> Agregar
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Pepino -->
+            <div class="col-md-3 mb-4">
+                <div class="card product-card h-100">
+                    <img src="assets/img/Frutas y Verduras/Food/Verduras Frescas/Pepino.jpg" class="card-img-top lazy-image" loading="lazy" onerror="handleImageError(this)" alt="Pepino">
+                    <div class="card-body">
+                        <h5 class="card-title">Pepino</h5>
+                        <p class="product-unit">Precio por kg</p>
+                        <p class="product-price">S/. 2.50 - 4.00</p>
+                        <div class="quantity-selector">
+                            <button class="btn btn-outline-secondary btn-sm" onclick="decrementQuantity(this)">-</button>
+                            <input type="number" class="form-control form-control-sm quantity" value="1" min="1" readonly>
+                            <button class="btn btn-outline-secondary btn-sm" onclick="incrementQuantity(this)">+</button>
+                        </div>
+                        <div class="product-actions mt-3">
+                            <button class="btn btn-primary" data-id="2015" onclick="addToCart(this)">
+                                <i class="fas fa-cart-plus"></i> Agregar
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Apio -->
+            <div class="col-md-3 mb-4">
+                <div class="card product-card h-100">
+                    <img src="assets/img/Frutas y Verduras/Food/Verduras Frescas/Apio.jpg" class="card-img-top lazy-image" loading="lazy" onerror="handleImageError(this)" alt="Apio">
+                    <div class="card-body">
+                        <h5 class="card-title">Apio</h5>
+                        <p class="product-unit">Precio por atado</p>
+                        <p class="product-price">S/. 1.50 - 2.50</p>
+                        <div class="quantity-selector">
+                            <button class="btn btn-outline-secondary btn-sm" onclick="decrementQuantity(this)">-</button>
+                            <input type="number" class="form-control form-control-sm quantity" value="1" min="1" readonly>
+                            <button class="btn btn-outline-secondary btn-sm" onclick="incrementQuantity(this)">+</button>
+                        </div>
+                        <div class="product-actions mt-3">
+                            <button class="btn btn-primary" data-id="2016" onclick="addToCart(this)">
+                                <i class="fas fa-cart-plus"></i> Agregar
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Poro -->
+            <div class="col-md-3 mb-4">
+                <div class="card product-card h-100">
+                    <img src="assets/img/Frutas y Verduras/Food/Verduras Frescas/Poro.jpg" class="card-img-top lazy-image" loading="lazy" onerror="handleImageError(this)" alt="Poro">
+                    <div class="card-body">
+                        <h5 class="card-title">Poro</h5>
+                        <p class="product-unit">Precio por unidad</p>
+                        <p class="product-price">S/. 1.00 - 2.00</p>
+                        <div class="quantity-selector">
+                            <button class="btn btn-outline-secondary btn-sm" onclick="decrementQuantity(this)">-</button>
+                            <input type="number" class="form-control form-control-sm quantity" value="1" min="1" readonly>
+                            <button class="btn btn-outline-secondary btn-sm" onclick="incrementQuantity(this)">+</button>
+                        </div>
+                        <div class="product-actions mt-3">
+                            <button class="btn btn-primary" data-id="2017" onclick="addToCart(this)">
+                                <i class="fas fa-cart-plus"></i> Agregar
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Ajo -->
+            <div class="col-md-3 mb-4">
+                <div class="card product-card h-100">
+                    <img src="assets/img/Frutas y Verduras/Food/Verduras Frescas/Ajo.jpg" class="card-img-top lazy-image" loading="lazy" onerror="handleImageError(this)" alt="Ajo">
+                    <div class="card-body">
+                        <h5 class="card-title">Ajo</h5>
+                        <p class="product-unit">Precio por kg</p>
+                        <p class="product-price">S/. 8.00 - 15.00</p>
+                        <div class="quantity-selector">
+                            <button class="btn btn-outline-secondary btn-sm" onclick="decrementQuantity(this)">-</button>
+                            <input type="number" class="form-control form-control-sm quantity" value="1" min="1" readonly>
+                            <button class="btn btn-outline-secondary btn-sm" onclick="incrementQuantity(this)">+</button>
+                        </div>
+                        <div class="product-actions mt-3">
+                            <button class="btn btn-primary" data-id="2018" onclick="addToCart(this)">
+                                <i class="fas fa-cart-plus"></i> Agregar
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Culantro -->
+            <div class="col-md-3 mb-4">
+                <div class="card product-card h-100">
+                    <img src="assets/img/Frutas y Verduras/Food/Verduras Frescas/Culantro.jpg" class="card-img-top lazy-image" loading="lazy" onerror="handleImageError(this)" alt="Culantro">
+                    <div class="card-body">
+                        <h5 class="card-title">Culantro</h5>
+                        <p class="product-unit">Precio por atado</p>
+                        <p class="product-price">S/. 1.00 - 2.00</p>
+                        <div class="quantity-selector">
+                            <button class="btn btn-outline-secondary btn-sm" onclick="decrementQuantity(this)">-</button>
+                            <input type="number" class="form-control form-control-sm quantity" value="1" min="1" readonly>
+                            <button class="btn btn-outline-secondary btn-sm" onclick="incrementQuantity(this)">+</button>
+                        </div>
+                        <div class="product-actions mt-3">
+                            <button class="btn btn-primary" data-id="2019" onclick="addToCart(this)">
+                                <i class="fas fa-cart-plus"></i> Agregar
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Betarraga -->
+            <div class="col-md-3 mb-4">
+                <div class="card product-card h-100">
+                    <img src="assets/img/Frutas y Verduras/Food/Verduras Frescas/Betarraga.jpg" class="card-img-top lazy-image" loading="lazy" onerror="handleImageError(this)" alt="Betarraga">
+                    <div class="card-body">
+                        <h5 class="card-title">Betarraga</h5>
+                        <p class="product-unit">Precio por kg</p>
+                        <p class="product-price">S/. 3.00 - 4.50</p>
+                        <div class="quantity-selector">
+                            <button class="btn btn-outline-secondary btn-sm" onclick="decrementQuantity(this)">-</button>
+                            <input type="number" class="form-control form-control-sm quantity" value="1" min="1" readonly>
+                            <button class="btn btn-outline-secondary btn-sm" onclick="incrementQuantity(this)">+</button>
+                        </div>
+                        <div class="product-actions mt-3">
+                            <button class="btn btn-primary" data-id="2020" onclick="addToCart(this)">
+                                <i class="fas fa-cart-plus"></i> Agregar
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Categoría: Jugos -->
+    <div class="container my-5">
+        <h2 class="text-center mb-4 category-title">Jugos y Smoothies</h2>
+        <p class="text-center text-muted">Refresca tu día con nuestros jugos y smoothies naturales, llenos de sabor y nutrientes.</p>
+        <div class="row">
+            <!-- Jugo Verde -->
+            <div class="col-md-3 mb-4">
+                <div class="card product-card h-100">
+                    <img src="assets/img/Frutas y Verduras/Food/Jugos y Smoothies/Jugo Verde Detox.jpg" class="card-img-top lazy-image" loading="lazy" onerror="handleImageError(this)" alt="Jugo Verde">
+                    <div class="card-body">
+                        <h5 class="card-title">Jugo Verde Detox</h5>
+                        <p class="product-unit">Precio por 500ml</p>
+                        <p class="product-price">S/. 55.00</p>
+                        <div class="quantity-selector">
+                            <button class="btn btn-outline-secondary btn-sm" onclick="decrementQuantity(this)">-</button>
+                            <input type="number" class="form-control form-control-sm quantity" value="1" min="1" readonly>
+                            <button class="btn btn-outline-secondary btn-sm" onclick="incrementQuantity(this)">+</button>
+                        </div>
+                        <div class="product-actions mt-3">
+                            <button class="btn btn-primary" data-id="1025" onclick="addToCart(this)">
+                                <i class="fas fa-cart-plus"></i> Agregar
+                            </button>
+                            <button class="btn btn-outline-secondary" data-bs-toggle="modal" data-bs-target="#productModal21">
+                                <i class="fas fa-info-circle"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Jugo de Naranja -->
+            <div class="col-md-3 mb-4">
+                <div class="card product-card h-100">
+                    <img src="assets/img/Frutas y Verduras/Food/Jugos y Smoothies/Jugo de Naranja Natural.jpg" class="card-img-top lazy-image" loading="lazy" onerror="handleImageError(this)" alt="Jugo de Naranja">
+                    <div class="card-body">
+                        <h5 class="card-title">Jugo de Naranja Natural</h5>
+                        <p class="product-unit">Precio por 500ml</p>
+                        <p class="product-price">S/. 42.00</p>
+                        <div class="quantity-selector">
+                            <button class="btn btn-outline-secondary btn-sm" onclick="decrementQuantity(this)">-</button>
+                            <input type="number" class="form-control form-control-sm quantity" value="1" min="1" readonly>
+                            <button class="btn btn-outline-secondary btn-sm" onclick="incrementQuantity(this)">+</button>
+                        </div>
+                        <div class="product-actions mt-3">
+                            <button class="btn btn-primary" data-id="1026" onclick="addToCart(this)">
+                                <i class="fas fa-cart-plus"></i> Agregar
+                            </button>
+                            <button class="btn btn-outline-secondary" data-bs-toggle="modal" data-bs-target="#productModal22">
+                                <i class="fas fa-info-circle"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Smoothie de Frutos Rojos -->
+            <div class="col-md-3 mb-4">
+                <div class="card product-card h-100">
+                    <img src="assets/img/Frutas y Verduras/Food/Jugos y Smoothies/Smoothie de Frutos Rojos.jpg" class="card-img-top lazy-image" loading="lazy" onerror="handleImageError(this)" alt="Smoothie de Frutos Rojos">
+                    <div class="card-body">
+                        <h5 class="card-title">Smoothie de Frutos Rojos</h5>
+                        <p class="product-unit">Precio por 400ml</p>
+                        <p class="product-price">S/. 60.00</p>
+                        <div class="quantity-selector">
+                            <button class="btn btn-outline-secondary btn-sm" onclick="decrementQuantity(this)">-</button>
+                            <input type="number" class="form-control form-control-sm quantity" value="1" min="1" readonly>
+                            <button class="btn btn-outline-secondary btn-sm" onclick="incrementQuantity(this)">+</button>
+                        </div>
+                        <div class="product-actions mt-3">
+                            <button class="btn btn-primary" data-id="1027" onclick="addToCart(this)">
+                                <i class="fas fa-cart-plus"></i> Agregar
+                            </button>
+                            <button class="btn btn-outline-secondary" data-bs-toggle="modal" data-bs-target="#productModal23">
+                                <i class="fas fa-info-circle"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Jugo de Zanahoria -->
+            <div class="col-md-3 mb-4">
+                <div class="card product-card h-100">
+                    <img src="assets/img/Frutas y Verduras/Food/Jugos y Smoothies/Jugo de Zanahoria con Jengibre.jpg" class="card-img-top lazy-image" loading="lazy" onerror="handleImageError(this)" alt="Jugo de Zanahoria">
+                    <div class="card-body">
+                        <h5 class="card-title">Jugo de Zanahoria con Jengibre</h5>
+                        <p class="product-unit">Precio por 500ml</p>
+                        <p class="product-price">S/. 48.00</p>
+                        <div class="quantity-selector">
+                            <button class="btn btn-outline-secondary btn-sm" onclick="decrementQuantity(this)">-</button>
+                            <input type="number" class="form-control form-control-sm quantity" value="1" min="1" readonly>
+                            <button class="btn btn-outline-secondary btn-sm" onclick="incrementQuantity(this)">+</button>
+                        </div>
+                        <div class="product-actions mt-3">
+                            <button class="btn btn-primary" data-id="1028" onclick="addToCart(this)">
+                                <i class="fas fa-cart-plus"></i> Agregar
+                            </button>
+                            <button class="btn btn-outline-secondary" data-bs-toggle="modal" data-bs-target="#productModal24">
+                                <i class="fas fa-info-circle"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="bg-dark text-white py-5">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4 mb-4">
+                    <h5>EcoMarket</h5>
+                    <p>Productos frescos y orgánicos directamente del campo a tu mesa.</p>
+                    <div class="social-icons">
+                        <a href="#" class="text-white me-2"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" class="text-white me-2"><i class="fab fa-instagram"></i></a>
+                        <a href="#" class="text-white me-2"><i class="fab fa-twitter"></i></a>
+                    </div>
+                </div>
+                <div class="col-md-2 mb-4">
+                    <h5>Categorías</h5>
+                    <ul class="list-unstyled">
+                        <li><a href="#" class="text-white">Frutas</a></li>
+                        <li><a href="#" class="text-white">Verduras</a></li>
+                        <li><a href="#" class="text-white">Ensaladas</a></li>
+                        <li><a href="#" class="text-white">Jugos</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-2 mb-4">
+                    <h5>Información</h5>
+                    <ul class="list-unstyled">
+                        <li><a href="#" class="text-white">Sobre Nosotros</a></li>
+                        <li><a href="#" class="text-white">Blog</a></li>
+                        <li><a href="#" class="text-white">Contacto</a></li>
+                        <li><a href="#" class="text-white">FAQs</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-4 mb-4">
+                    <h5>Suscríbete</h5>
+                    <p>Recibe ofertas especiales y novedades.</p>
+                    <div class="input-group mb-3">
+                        <input type="email" class="form-control" placeholder="Tu correo electrónico">
+                        <button class="btn btn-primary" type="button">Suscribir</button>
+                    </div>
+                </div>
+            </div>
+            <hr>
+            <div class="row">
+                <div class="col-md-6">
+                    <p class="mb-0">&copy; 2023 EcoMarket. Todos los derechos reservados.</p>
+                </div>
+                <div class="col-md-6 text-md-end">
+                    <a href="#" class="text-white me-3">Términos y condiciones</a>
+                    <a href="#" class="text-white">Política de privacidad</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>

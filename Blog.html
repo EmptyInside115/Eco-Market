@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EcoMarket - Productos Orgánicos</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.2.3/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="assets/css/styles.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/toastify-js/src/toastify.min.css">
+
+    <!-- Scripts -->
+    <script src="https://cdn.jsdelivr.net/npm/toastify-js/src/toastify.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.2.3/js/bootstrap.bundle.min.js"></script>
+    <script src="assets/js/Script.js" type="module"></script>
+</head>
+<body>
+
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-success fixed-top">
+        <div class="container">
+            <a class="navbar-brand" href="Main.html">
+                <img src="assets/img/icons/logo/Logo.png" alt="EcoMarket" width="120">
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" role="button" 
+                        data-bs-toggle="dropdown" aria-expanded="false">
+                            Categorías
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="Frutas y Verduras.html">Frutas y Verduras</a></li>
+                            <li><a class="dropdown-item" href="Granos y Legumbres.html">Granos y Legumbres</a></li>
+                            <li><a class="dropdown-item" href="Productos Elaborados.html">Productos Elaborados</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item"><a class="nav-link" href="Ofertas Especiales.html">Ofertas</a></li>
+                    <li class="nav-item"><a class="nav-link" href="Blog.html">Blog</a></li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" role="button" 
+                        data-bs-toggle="dropdown" aria-expanded="false">
+                            Nosotros
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="Sobre Nosotros.html">Conócenos</a></li>
+                            <li><a class="dropdown-item" href="Contacto.html">Contacto</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="Cart.html">
+                            <i class="fas fa-shopping-cart"></i>
+                            <span id="cart-count" class="badge bg-danger">0</span>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Banner principal -->
+     <div class="main-banner mt-5">
+        <img src="assets/img/Main/Carrusel/Banner3.png"
+        class="d-block w-100" 
+         alt="Productos orgánicos frescos" 
+         style="object-fit: cover; height: 500px;">
+    </div>
+
+    <!-- Featured Articles -->
+    <section class="container mb-5">
+        <h2 class="text-center mb-4">Artículos Destacados</h2>
+        <div class="row">
+            <div class="col-md-4">
+                <div class="card h-100">
+                    <img src="assets/img/blog/featured1.jpg" class="card-img-top" alt="Artículo 1">
+                    <div class="card-body">
+                        <h5 class="card-title">Beneficios de los Productos Orgánicos</h5>
+                        <p class="card-text">Descubre cómo los productos orgánicos pueden mejorar tu salud y el medio ambiente.</p>
+                        <a href="#" class="btn btn-primary">Leer más</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card h-100">
+                    <img src="assets/img/blog/featured2.jpg" class="card-img-top" alt="Artículo 2">
+                    <div class="card-body">
+                        <h5 class="card-title">Recetas Saludables con Ingredientes Orgánicos</h5>
+                        <p class="card-text">Explora recetas fáciles y deliciosas para toda la familia.</p>
+                        <a href="#" class="btn btn-primary">Leer más</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card h-100">
+                    <img src="assets/img/blog/featured3.jpg" class="card-img-top" alt="Artículo 3">
+                    <div class="card-body">
+                        <h5 class="card-title">Cómo Apoyar a los Agricultores Locales</h5>
+                        <p class="card-text">Aprende cómo tus compras pueden marcar la diferencia.</p>
+                        <a href="#" class="btn btn-primary">Leer más</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Blog Posts -->
+    <section class="container mb-5">
+        <h2 class="text-center mb-4">Últimos Artículos</h2>
+        <div class="row">
+            <div class="col-md-6 mb-4">
+                <div class="card h-100">
+                    <img src="assets/img/blog/post1.jpg" class="card-img-top" alt="Post 1">
+                    <div class="card-body">
+                        <h5 class="card-title">5 Razones para Elegir Productos Orgánicos</h5>
+                        <p class="card-text">Conoce las principales razones para incluir productos orgánicos en tu dieta.</p>
+                        <a href="#" class="btn btn-outline-primary">Leer más</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6 mb-4">
+                <div class="card h-100">
+                    <img src="assets/img/blog/post2.jpg" class="card-img-top" alt="Post 2">
+                    <div class="card-body">
+                        <h5 class="card-title">Cómo Reducir el Desperdicio de Alimentos</h5>
+                        <p class="card-text">Consejos prácticos para aprovechar al máximo tus compras.</p>
+                        <a href="#" class="btn btn-outline-primary">Leer más</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6 mb-4">
+                <div class="card h-100">
+                    <img src="assets/img/blog/post3.jpg" class="card-img-top" alt="Post 3">
+                    <div class="card-body">
+                        <h5 class="card-title">La Importancia de la Agricultura Sostenible</h5>
+                        <p class="card-text">Descubre cómo la agricultura sostenible beneficia a todos.</p>
+                        <a href="#" class="btn btn-outline-primary">Leer más</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6 mb-4">
+                <div class="card h-100">
+                    <img src="assets/img/blog/post4.jpg" class="card-img-top" alt="Post 4">
+                    <div class="card-body">
+                        <h5 class="card-title">Ideas de Snacks Saludables</h5>
+                        <p class="card-text">Opciones rápidas y saludables para tus días ocupados.</p>
+                        <a href="#" class="btn btn-outline-primary">Leer más</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-dark text-white py-4">
+        <div class="container text-center">
+            <p>&copy; 2023 EcoMarket. Todos los derechos reservados.</p>
+        </div>
+    </footer>
+</body>
+</html>
